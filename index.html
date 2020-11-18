@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <title>웹 폰트 테스트</title>
+
+    <style>
+        @font-face {
+            font-family: 'adelon';
+            font-weight: normal;
+            font-style: normal;
+            src: url('./font/adelon.eot');
+            src: url('./font/adelon.woff2') format('woff2'),
+                 url('./font/adelon.woff') format('woff'),
+                 url('./font/adelon.ttf') format('truetype');
+        }
+        body { background:black; color:white; padding:30px; line-height:2;}
+        * { margin:0; padding:0; border:0; }
+
+        .noto-serif { font-family: 'Noto Serif', serif; }
+        .noto-serif-sc { font-family: 'Noto Serif SC', serif; }
+        .noto-serif-tc { font-family:  'Noto Serif TC', serif; }
+        .adelon { font-fmaily:'adelon', serif; }
+
+        h1 {margin:20px 0 0;}
+    </style>
+</head>
+<body>
+    <!-- <h1>TIMES NEW ROMANS ==== EN</h1>
+    <p class="roman">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+
+
+
+    <h1>ADELON ==== EN</h1>
+    <p class="adelon">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <h1>NotoSerif ==== RU</h1>
+    <p class="noto-serif">Czym jest Lorem Ipsum?
+Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+
+    <h1>NotoSerif---SC ==== CN</h1>
+    <p class="noto-serif-sc">什么是Lorem Ipsum?
+Lorem Ipsum，也称乱数假文或者哑元文本， 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。</p>
+
+    <h1>NotoSerif---TC ==== TW</h1>
+    <p class="noto-serif-tc">透過擊殺怪物、完成任務、採集行為可以獲得戰利品。  所有戰利品(也就是道具)都有一定的負重，黑色沙漠 MOBILE世界上以[LT]標記道具的負重。  角色可最多持有的道具量會按照背包的負重，也就是由背包負重判定。無法獲得道具、套用負面效果、而且因負重的關係無法領取任務獎勵所以也會無法完成任務。。</p>
+</body>
+</html>
