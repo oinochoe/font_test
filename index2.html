@@ -37,7 +37,7 @@
             unicode-range: U+0030-0039;
         }
 
-        /* 공통 - medium, bold 없음 */
+        /* 공통 - 라틴, cyclic, greek */
         @font-face {
             font-family: 'custom';
             font-weight: 400;
@@ -45,6 +45,24 @@
             src: url('./font_v2/notosans_regular.woff2') format('woff2'),
             url('./font_v2/notosans_regular.woff') format('woff'),
             url('./font_v2/notosans_regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'custom';
+            font-weight: 500;
+            font-style: normal;
+            src: url('./font_v2/notosans_medium.woff2') format('woff2'),
+            url('./font_v2/notosans_medium.woff') format('woff'),
+            url('./font_v2/notosans_medium.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'custom';
+            font-weight: 700;
+            font-style: normal;
+            src: url('./font_v2/notosans_bold.woff2') format('woff2'),
+            url('./font_v2/notosans_bold.woff') format('woff'),
+            url('./font_v2/notosans_bold.ttf') format('truetype');
         }
 
         /* 한국 */
@@ -265,11 +283,15 @@
         :lang(de-de), :lang(de-de) body, :lang(de-de) div, :lang(de-de) span, :lang(de-de) input, :lang(de-de) textarea, :lang(de-de) a, :lang(de-de) button, :lang(de-de) select, :lang(de-de) p, :lang(de-de) li, :lang(de-de) dd, :lang(de-de) dt, :lang(de-de) sup, :lang(de-de) sub, :lang(de-de) strong, :lang(de-de) blockquote, :lang(de-de) pre, :lang(de-de) cite, :lang(de-de) em, :lang(de-de) td, :lang(de-de) th, :lang(de-de) article,
         :lang(es-es), :lang(es-es) body, :lang(es-es) div, :lang(es-es) span, :lang(es-es) input, :lang(es-es) textarea, :lang(es-es) a, :lang(es-es) button, :lang(es-es) select, :lang(es-es) p, :lang(es-es) li, :lang(es-es) dd, :lang(es-es) dt, :lang(es-es) sup, :lang(es-es) sub, :lang(es-es) strong, :lang(es-es) blockquote, :lang(es-es) pre, :lang(es-es) cite, :lang(es-es) em, :lang(es-es) td, :lang(es-es) th, :lang(es-es) article,
         :lang(es-mx), :lang(es-mx) body, :lang(es-mx) div, :lang(es-mx) span, :lang(es-mx) input, :lang(es-mx) textarea, :lang(es-mx) a, :lang(es-mx) button, :lang(es-mx) select, :lang(es-mx) p, :lang(es-mx) li, :lang(es-mx) dd, :lang(es-mx) dt, :lang(es-mx) sup, :lang(es-mx) sub, :lang(es-mx) strong, :lang(es-mx) blockquote, :lang(es-mx) pre, :lang(es-mx) cite, :lang(es-mx) em, :lang(es-mx) td, :lang(es-mx) th, :lang(es-mx) article,
-        :lang(pt-br), :lang(pt-br) body, :lang(pt-br) div, :lang(pt-br) span, :lang(pt-br) input, :lang(pt-br) textarea, :lang(pt-br) a, :lang(pt-br) button, :lang(pt-br) select, :lang(pt-br) p, :lang(pt-br) li, :lang(pt-br) dd, :lang(pt-br) dt, :lang(pt-br) sup, :lang(pt-br) sub, :lang(pt-br) strong, :lang(pt-br) blockquote, :lang(pt-br) pre, :lang(pt-br) cite, :lang(pt-br) em, :lang(pt-br) td, :lang(pt-br) th, :lang(pt-br) article { font-family: 'roboto', 'custom', sans-serif; }
-        :lang(tr-tr), :lang(tr-tr) body, :lang(tr-tr) div, :lang(tr-tr) span, :lang(tr-tr) input, :lang(tr-tr) textarea, :lang(tr-tr) a, :lang(tr-tr) button, :lang(tr-tr) select, :lang(tr-tr) p, :lang(tr-tr) li, :lang(tr-tr) dd, :lang(tr-tr) dt, :lang(tr-tr) sup, :lang(tr-tr) sub, :lang(tr-tr) strong, :lang(tr-tr) blockquote, :lang(tr-tr) pre, :lang(tr-tr) cite, :lang(tr-tr) em, :lang(tr-tr) td, :lang(tr-tr) th, :lang(tr-tr) article { font-family: 'roboto', 'customTR', sans-serif; }
+        :lang(pt-br), :lang(pt-br) body, :lang(pt-br) div, :lang(pt-br) span, :lang(pt-br) input, :lang(pt-br) textarea, :lang(pt-br) a, :lang(pt-br) button, :lang(pt-br) select, :lang(pt-br) p, :lang(pt-br) li, :lang(pt-br) dd, :lang(pt-br) dt, :lang(pt-br) sup, :lang(pt-br) sub, :lang(pt-br) strong, :lang(pt-br) blockquote, :lang(pt-br) pre, :lang(pt-br) cite, :lang(pt-br) em, :lang(pt-br) td, :lang(pt-br) th, :lang(pt-br) article,
+        :lang(ru-ru), :lang(ru-ru) body, :lang(ru-ru) div, :lang(ru-ru) span, :lang(ru-ru) input, :lang(ru-ru) textarea, :lang(ru-ru) a, :lang(ru-ru) button, :lang(ru-ru) select, :lang(ru-ru) p, :lang(ru-ru) li, :lang(ru-ru) dd, :lang(ru-ru) dt, :lang(ru-ru) sup, :lang(ru-ru) sub, :lang(ru-ru) strong, :lang(ru-ru) blockquote, :lang(ru-ru) pre, :lang(ru-ru) cite, :lang(ru-ru) em, :lang(ru-ru) td, :lang(ru-ru) th, :lang(ru-ru) article,
+        :lang(tr-tr), :lang(tr-tr) body, :lang(tr-tr) div, :lang(tr-tr) span, :lang(tr-tr) input, :lang(tr-tr) textarea, :lang(tr-tr) a, :lang(tr-tr) button, :lang(tr-tr) select, :lang(tr-tr) p, :lang(tr-tr) li, :lang(tr-tr) dd, :lang(tr-tr) dt, :lang(tr-tr) sup, :lang(tr-tr) sub, :lang(tr-tr) strong, :lang(tr-tr) blockquote, :lang(tr-tr) pre, :lang(tr-tr) cite, :lang(tr-tr) em, :lang(tr-tr) td, :lang(tr-tr) th, :lang(tr-tr) article { font-family: 'roboto', 'custom', sans-serif; }
+
+        /* :lang(ru-ru), :lang(ru-ru) body, :lang(ru-ru) div, :lang(ru-ru) span, :lang(ru-ru) input, :lang(ru-ru) textarea, :lang(ru-ru) a, :lang(ru-ru) button, :lang(ru-ru) select, :lang(ru-ru) p, :lang(ru-ru) li, :lang(ru-ru) dd, :lang(ru-ru) dt, :lang(ru-ru) sup, :lang(ru-ru) sub, :lang(ru-ru) strong, :lang(ru-ru) blockquote, :lang(ru-ru) pre, :lang(ru-ru) cite, :lang(ru-ru) em, :lang(ru-ru) td, :lang(ru-ru) th, :lang(ru-ru) article { font-family: 'roboto', 'customRU', sanserif; }
+        :lang(tr-tr), :lang(tr-tr) body, :lang(tr-tr) div, :lang(tr-tr) span, :lang(tr-tr) input, :lang(tr-tr) textarea, :lang(tr-tr) a, :lang(tr-tr) button, :lang(tr-tr) select, :lang(tr-tr) p, :lang(tr-tr) li, :lang(tr-tr) dd, :lang(tr-tr) dt, :lang(tr-tr) sup, :lang(tr-tr) sub, :lang(tr-tr) strong, :lang(tr-tr) blockquote, :lang(tr-tr) pre, :lang(tr-tr) cite, :lang(tr-tr) em, :lang(tr-tr) td, :lang(tr-tr) th, :lang(tr-tr) article { font-family: 'roboto', 'customTR', sans-serif; } */
+
         :lang(ko-kr), :lang(ko-kr) body, :lang(ko-kr) div, :lang(ko-kr) span, :lang(ko-kr) input, :lang(ko-kr) textarea, :lang(ko-kr) a, :lang(ko-kr) button, :lang(ko-kr) select, :lang(ko-kr) p, :lang(ko-kr) li, :lang(ko-kr) dd, :lang(ko-kr) dt, :lang(ko-kr) sup, :lang(ko-kr) sub, :lang(ko-kr) strong, :lang(ko-kr) blockquote, :lang(ko-kr) pre, :lang(ko-kr) cite, :lang(ko-kr) em, :lang(ko-kr) td, :lang(ko-kr) th, :lang(ko-kr) article { font-family: 'roboto', 'customKR', sans-serif; }
         :lang(ja-jp), :lang(ja-jp) body, :lang(ja-jp) div, :lang(ja-jp) span, :lang(ja-jp) input, :lang(ja-jp) textarea, :lang(ja-jp) a, :lang(ja-jp) button, :lang(ja-jp) select, :lang(ja-jp) p, :lang(ja-jp) li, :lang(ja-jp) dd, :lang(ja-jp) dt, :lang(ja-jp) sup, :lang(ja-jp) sub, :lang(ja-jp) strong, :lang(ja-jp) blockquote, :lang(ja-jp) pre, :lang(ja-jp) cite, :lang(ja-jp) em, :lang(ja-jp) td, :lang(ja-jp) th, :lang(ja-jp) article { font-family: 'roboto', 'customJP', sanserif; }
-        :lang(ru-ru), :lang(ru-ru) body, :lang(ru-ru) div, :lang(ru-ru) span, :lang(ru-ru) input, :lang(ru-ru) textarea, :lang(ru-ru) a, :lang(ru-ru) button, :lang(ru-ru) select, :lang(ru-ru) p, :lang(ru-ru) li, :lang(ru-ru) dd, :lang(ru-ru) dt, :lang(ru-ru) sup, :lang(ru-ru) sub, :lang(ru-ru) strong, :lang(ru-ru) blockquote, :lang(ru-ru) pre, :lang(ru-ru) cite, :lang(ru-ru) em, :lang(ru-ru) td, :lang(ru-ru) th, :lang(ru-ru) article { font-family: 'roboto', 'customRU', sanserif; }
         :lang(th-th), :lang(th-th) body, :lang(th-th) div, :lang(th-th) span, :lang(th-th) input, :lang(th-th) textarea, :lang(th-th) a, :lang(th-th) button, :lang(th-th) select, :lang(th-th) p, :lang(th-th) li, :lang(th-th) dd, :lang(th-th) dt, :lang(th-th) sup, :lang(th-th) sub, :lang(th-th) strong, :lang(th-th) blockquote, :lang(th-th) pre, :lang(th-th) cite, :lang(th-th) em, :lang(th-th) td, :lang(th-th) th, :lang(th-th) article { font-family: 'roboto', 'customTH', Lato, "Lucida Grande", Tahoma, sanserif; }
         :lang(zh-tw), :lang(zh-tw) body, :lang(zh-tw) div, :lang(zh-tw) span, :lang(zh-tw) input, :lang(zh-tw) textarea, :lang(zh-tw) a, :lang(zh-tw) button, :lang(zh-tw) select, :lang(zh-tw) p, :lang(zh-tw) li, :lang(zh-tw) dd, :lang(zh-tw) dt, :lang(zh-tw) sup, :lang(zh-tw) sub, :lang(zh-tw) strong, :lang(zh-tw) blockquote, :lang(zh-tw) pre, :lang(zh-tw) cite, :lang(zh-tw) em, :lang(zh-tw) td, :lang(zh-tw) th, :lang(zh-tw) article { font-family: 'roboto', 'customTW', sanserif; }
         :lang(zh-cn), :lang(zh-cn) body, :lang(zh-cn) div, :lang(zh-cn) span, :lang(zh-cn) input, :lang(zh-cn) textarea, :lang(zh-cn) a, :lang(zh-cn) button, :lang(zh-cn) select, :lang(zh-cn) p, :lang(zh-cn) li, :lang(zh-cn) dd, :lang(zh-cn) dt, :lang(zh-cn) sup, :lang(zh-cn) sub, :lang(zh-cn) strong, :lang(zh-cn) blockquote, :lang(zh-cn) pre, :lang(zh-cn) cite, :lang(zh-cn) em, :lang(zh-cn) td, :lang(zh-cn) th, :lang(zh-cn) article { font-family: 'roboto', 'customCN', sanserif; }
@@ -290,7 +312,7 @@
     <div class="bg_black">
         <!-- CUSTOM -->
         <div class="box">
-            <h1>NOTOSANS REGULAR common + ROBOTO REGULAR(공통 - medium, bold 없음)</h1>
+            <h1>NOTOSANS REGULAR common + ROBOTO REGULAR</h1>
             <h2>영어</h2>
             <p class="custom">12354127458-7=-rem Ipsum is simply dummy text of the printing and typesetting industry. Lo12354127458-7=-rem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  </p>
             <h2>프랑스어</h2>
@@ -303,6 +325,28 @@
             <p class="custom">12354127458-7=Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editor  </p>
             <h2>포루투갈어</h2>
             <p class="custom">12354127458-7=-remÉ um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo aqui, conteúdo aqui", tory of  </p>
+            <h2>터키(*)</h2>
+            <p class="custom">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur. </p>            
+            <h2>러시아어(*)</h2>
+            <p class="custom">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker </p>            
+
+            <h1>NOTOSANS MEDIUM common + ROBOTO MEDIUM</h1>
+            <h2>영어</h2>
+            <p class="custom medium">12354127458-7=-rem Ipsum is simply dummy text of the printing and typesetting industry. Lo12354127458-7=-rem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  </p>
+            <h2>프랑스어</h2>
+            <p class="custom medium">12354127458-7="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia de  </p>
+            <h2>독일어</h2>
+            <p class="custom medium">12354127458-7=-remch zu erstellen. Es hat nicht nur 5 Jahrhunderte überlebt, sondern auch in Spruch in die elektronische Schriftbearbeitung geschafft (bemerke, nahezu unverändert). Bekannt wurde es 1960, mit dem erscheinen von "Letraset", welches Passagen von Lorem Ipsum enhielt, so wie Desktop Software wie "Ald </p>
+            <h2>스페인어</h2>
+            <p class="custom medium">12354127458-7=Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editor  </p>
+            <h2>스페인어</h2>
+            <p class="custom medium">12354127458-7=Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editor  </p>
+            <h2>포루투갈어</h2>
+            <p class="custom medium">12354127458-7=-remÉ um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo aqui, conteúdo aqui", tory of  </p>
+            <h2>터키(*)</h2>
+            <p class="custom medium">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.</p>            
+            <h2>러시아어(*)</h2>
+            <p class="custom medium">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker </p>            
 
             <h1>NOTOSANS BOLD common + ROBOTO BOLD</h1>
             <h2>영어</h2>
@@ -317,6 +361,10 @@
             <p class="custom bold">12354127458-7=-Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editor </p>            
             <h2>포루투갈어</h2>
             <p class="custom bold">12354127458-7=É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo aqui, conteúdo aqui", tor </p>            
+            <h2>터키(*)</h2>
+            <p class="custom bold">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur. </p>            
+            <h2>러시아어(*)</h2>
+            <p class="custom bold">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker </p>            
         </div>
 
         <!-- kr -->
