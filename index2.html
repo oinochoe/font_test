@@ -253,9 +253,10 @@
             url('./font_v2/notosans_ar_bold.ttf') format('truetype');
         }
 
-        body { background:black; color:white; padding:30px; line-height:2; font-size:18px;}
+        body { background:black; color:white; padding:30px; line-height:2; font-size:20px;}
         * { margin:0; padding:0; border:0; }
-        h1 {margin:20px 0 0; font-size: 20px; color: #c4d527;}
+        h1 {margin:20px 0 0; font-size: 20px; color: #e3ff0b;}
+        .warning {color: yellow;}
 
         .size_50 {font-size:50px;}
         .medium {font-weight:500 !important;}
@@ -310,11 +311,26 @@
 </head>
 <body>
     <div class="bg_black">
+        <p class="warning">
+            - font-weight  기준 <br/> 
+            &nbsp;&nbsp;Regular: 400,<br/> 
+            &nbsp;&nbsp;Medium: 500,<br/>
+            &nbsp;&nbsp;Bold:  700 <br/><br/>
+            - font-family : devtool 참고해서 선언 확인 <br/><br/>
+
+            *Latin : 라틴어에서 발달한 스페인어, 포르투갈어, 이탈리아어, 프랑스어 등<br/>
+            *Cyrillic : 키릴 문자의(러시아어, 불가리아어 및 일부 중부 유럽 국가들의 언어에서 사용하는 알파벳)<br/>
+            *Greek : 그리스어<br/>
+            &nbsp;&nbsp; 라틴,시실릭을 포함하는 폰트는 현재 사용중인 russia(32kb), turkey(22kb) 폰트 보다 regular(182kb)로 6배 정도 무거움,
+            <br/>&nbsp;&nbsp; 여기에 Medium(182kb), Bold(179kb), roboto regular(65kb), roboto medium(66kb), roboto bold(65kb) <br/>
+            &nbsp;&nbsp; 총 합산 : 러시아 페이지에 들어갔을 때 기존에 32kb 받던 폰트 용량이 => 739kb(약 23.1배) 정도 되게 됨<br/><br/>
+
+            tw가 가장 무거움, 현재 16mb를 받고 있는데 => regular(3mb), medium(3mb), bold(3mb) => 9mb + roboto(65kb + 66kb + 65kb)
+        </p>
         <!-- CUSTOM -->
         <div class="box">
-            <p class="warning">R: font-weight 400, M: font-weight 500, B: font-weight: 700 / font-family는 devtool 참고</p>
 
-            <h1>NOTOSANS REGULAR common + ROBOTO REGULAR</h1>
+            <h1>REGULAR(*Latin, *Cyrillic and *Greek)</h1>
             <h2>영어</h2>
             <p class="custom">12354127458-7=-rem Ipsum is simply dummy text of the printing and typesetting industry. Lo12354127458-7=-rem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  </p>
             <h2>프랑스어</h2>
@@ -332,7 +348,7 @@
             <h2>러시아어(*)</h2>
             <p class="custom">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker </p>            
 
-            <h1>NOTOSANS MEDIUM common + ROBOTO MEDIUM</h1>
+            <h1>MEDIUM(*Latin, *Cyrillic and *Greek)</h1>
             <h2>영어</h2>
             <p class="custom medium">12354127458-7=-rem Ipsum is simply dummy text of the printing and typesetting industry. Lo12354127458-7=-rem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  </p>
             <h2>프랑스어</h2>
@@ -350,7 +366,7 @@
             <h2>러시아어(*)</h2>
             <p class="custom medium">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker </p>            
 
-            <h1>NOTOSANS BOLD common + ROBOTO BOLD</h1>
+            <h1>BOLD(*Latin, *Cyrillic and *Greek)</h1>
             <h2>영어</h2>
             <p class="custom bold">12354127458-7=-rem Ipsum is simply dummy text of the printing and typesetting industry. Lo12354127458-7=-rem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  </p>            
             <h2>프랑스어</h2>
@@ -371,96 +387,96 @@
 
         <!-- kr -->
         <div class="box">
-            <h1>NOTOSANS REGULAR KR + ROBOTO REGULAR(한국어)</h1>
+            <h1>REGULAR KR(한국어)</h1>
             <p class="customKR">감사원의 조직·직무범12314123412위·감사위원의 자격·감사대상공무원의 범위34123412341234123412341234 기타 필요한 사항은 법률로 정한다. 제1항의 지시를 받은 당해 행정기관은 이에 응하여야 한다. 대통령은 국회에 출석하여 발언하거나 서한으로 의견을 표시할 수 있다. 
             </p>
-            <h1>NOTOSANS MEDIUM KR + ROBOTO MEDIUM</h1>
+            <h1>MEDIUM KR</h1>
             <p class="customKR medium">감사원의 조직·직무범12314123412위·감사위원의 자격·감사대상공무원의 범위34123412341234123412341234 기타 필요한 사항은 법률로 정한다. 제1항의 지시를 받은 당해 행정기관은 이에 응하여야 한다. 대통령은 국회에 출석하여 발언하거나 서한으로 의견을 표시할 수 있다. 
             </p>
-            <h1>NOTOSANS BOLD KR + ROBOTO BOLD</h1>
+            <h1>BOLD KR</h1>
             <p class="customKR bold">감사원의 조직·직무범12314123412위·감사위원의 자격·감사대상공무원의 범위34123412341234123412341234 기타 필요한 사항은 법률로 정한다. 제1항의 지시를 받은 당해 행정기관은 이에 응하여야 한다. 대통령은 국회에 출석하여 발언하거나 서한으로 의견을 표시할 수 있다. 
             </p>
         </div>
 
         <!-- jp -->
         <div class="box">
-            <h1>NOTOSANS REGULAR JP + ROBOTO REGULAR(일본어)</h1>
+            <h1>REGULAR JP(일본어)</h1>
             <p class="customJP">報こは写本クょイ環予暑記アム論旬利みー割託ハラ被無ねょ1234567890はる条間ラソナ不議そみ円年ぐっそ京売げ玲善せさずラ義9議村事ねりぱふ。
             </p>
-            <h1>NOTOSANS MEDIUM JP + ROBOTO MEDIUM</h1>
+            <h1>MEDIUM JP</h1>
             <p class="customJP medium">報こは写本クょイ環予暑記アム論旬利みー割託ハラ被無ねょ1234567890はる条間ラソナ不議そみ円年ぐっそ京売げ玲善せさずラ義9議村事ねりぱふ。
             </p>
-            <h1>NOTOSANS BOLD JP + ROBOTO BOLD</h1>
+            <h1>BOLD JP</h1>
             <p class="customJP bold">報こは写本クょイ環予暑記アム論旬利みー割託ハラ被無ねょ1234567890はる条間ラソナ不議そみ円年ぐっそ京売げ玲善せさずラ義9議村事ねりぱふ。
             </p>
         </div>
 
         <!-- ru -->
         <div class="box">
-            <h1>NOTOSANS REGULAR RU + ROBOTO REGULAR(러시아어 - medium, bold 없음)</h1>
+            <h1>REGULAR RU(러시아어 - medium, bold 없음)</h1>
             <p class="customRU">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
-            <h1>NOTOSANS BOLD RU + ROBOTO BOLD</h1>
+            <h1>BOLD RU</h1>
             <p class="customRU bold">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
         </div>
 
         <!-- th -->
         <div class="box">
-            <h1>NOTOSANS REGULAR TH + ROBOTO REGULAR(태국어)</h1>
+            <h1>REGULAR TH(태국어)</h1>
             <p class="customTH">าบ ไลท์ 12345679079049580sความหมายพุทธภูมิโต๋เต๋ซีดาน หลวงตา ชีสแครกเกอร์ มาม่าโอเวอร์หลวงปู่ปิยมิตร อิสรชนไฮบริดเคลมเปียโนฮอตดอก แอพพริคอท เสกสรรค์โปลิศฮองเฮาคันยิรูบิค ป๋อหลอรามาธิบดี สไลด์ไฮเวย์จีดีพี โรลออนใช้งานต้าอ่วยเช็งเม้ง
             </p>
-            <h1>NOTOSANS MEDIUM TH + ROBOTO MEDIUM</h1>
+            <h1>MEDIUM TH</h1>
             <p class="customTH medium">าบ ไลท์ 12345679079049580sความหมายพุทธภูมิโต๋เต๋ซีดาน หลวงตา ชีสแครกเกอร์ มาม่าโอเวอร์หลวงปู่ปิยมิตร อิสรชนไฮบริดเคลมเปียโนฮอตดอก แอพพริคอท เสกสรรค์โปลิศฮองเฮาคันยิรูบิค ป๋อหลอรามาธิบดี สไลด์ไฮเวย์จีดีพี โรลออนใช้งานต้าอ่วยเช็งเม้ง
             </p>
-            <h1>NOTOSANS BOLD TH + ROBOTO BOLD</h1>
+            <h1>BOLD TH</h1>
             <p class="customTH bold">าบ ไลท์ 12345679079049580sความหมายพุทธภูมิโต๋เต๋ซีดาน หลวงตา ชีสแครกเกอร์ มาม่าโอเวอร์หลวงปู่ปิยมิตร อิสรชนไฮบริดเคลมเปียโนฮอตดอก แอพพริคอท เสกสรรค์โปลิศฮองเฮาคันยิรูบิค ป๋อหลอรามาธิบดี สไลด์ไฮเวย์จีดีพี โรลออนใช้งานต้าอ่วยเช็งเม้ง
             </p>
         </div>
 
         <!-- tr -->
         <div class="box">
-            <h1>NOTOSANS REGULAR TR + ROBOTO REGULAR(터키어 - medium, bold 없음)</h1>
+            <h1>REGULAR TR(터키어 - medium, bold 없음)</h1>
             <p class="customTR">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.
             </p>
-            <h1>NOTOSANS BOLD TR + ROBOTO BOLD</h1>
+            <h1>BOLD TR</h1>
             <p class="customTR bold">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.
             </p>
         </div>
 
         <!-- tw -->
         <div class="box">
-            <h1>NOTOSANS REGULAR TW + ROBOTO REGULAR(대만어)</h1>
+            <h1>REGULAR TW(대만어)</h1>
             <p class="customTW">透1234567378982374019273481過擊殺怪物、完成任務、採集行為可以獲得戰利品。  所有戰利品(也就是道具)都有一定的負重，黑色沙漠 MOBILE世界上以[LT]標記道具的負重。  角色可最多持有的道具量會按照背包的負重，也就是由背包負重判定。無法獲得道具、套用負面效果、而且因負重的關係無法領取任務獎勵所以也會無法完成任務。。
             </p>
-            <h1>NOTOSANS MEDIUM TW + ROBOTO MEDIUM</h1>
+            <h1>MEDIUM TW</h1>
             <p class="customTW medium">透1234567378982374019273481過擊殺怪物、完成任務、採集行為可以獲得戰利品。  所有戰利品(也就是道具)都有一定的負重，黑色沙漠 MOBILE世界上以[LT]標記道具的負重。  角色可最多持有的道具量會按照背包的負重，也就是由背包負重判定。無法獲得道具、套用負面效果、而且因負重的關係無法領取任務獎勵所以也會無法完成任務。。
             </p>
-            <h1>NOTOSANS BOLD TW + ROBOTO BOLD</h1>
+            <h1>BOLD TW</h1>
             <p class="customTW bold">透1234567378982374019273481過擊殺怪物、完成任務、採集行為可以獲得戰利品。  所有戰利品(也就是道具)都有一定的負重，黑色沙漠 MOBILE世界上以[LT]標記道具的負重。  角色可最多持有的道具量會按照背包的負重，也就是由背包負重判定。無法獲得道具、套用負面效果、而且因負重的關係無法領取任務獎勵所以也會無法完成任務。。
             </p>
         </div>
 
         <!-- cn -->
         <div class="box">
-            <h1>NOTOSANS REGULAR CN + ROBOTO REGULAR(중국어)</h1>
+            <h1>REGULAR CN(중국어)</h1>
             <p class="customCN">123412451378907-912Lorem Ipsum，也称乱数假文或者哑元文本， 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
             </p>
-            <h1>NOTOSANS MEDIUM CN + ROBOTO MEDIUM</h1>
+            <h1>MEDIUM CN</h1>
             <p class="customCN medium">123412451378907-912Lorem Ipsum，也称乱数假文或者哑元文本， 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
             </p>
-            <h1>NOTOSANS BOLD CN + ROBOTO BOLD</h1>
+            <h1>BOLD CN</h1>
             <p class="customCN bold">123412451378907-912Lorem Ipsum，也称乱数假文或者哑元文本， 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
             </p>
         </div>
 
         <!-- ar -->
         <div class="box">
-            <h1>NOTOSANS REGULAR AR + ROBOTO REGULAR(아랍어)</h1>
+            <h1>REGULAR AR(아랍어)</h1>
             <p class="customAR">123412451378907-912لمّا كان الاعتراف بالكرامة المتأصلة في جميع
             </p>
-            <h1>NOTOSANS MEDIUM AR + ROBOTO MEDIUM</h1>
+            <h1>MEDIUM AR</h1>
             <p class="customAR medium">123412451378907-912لمّا كان الاعتراف بالكرامة المتأصلة في جميع
             </p>
-            <h1>NOTOSANS BOLD AR + ROBOTO BOLD</h1>
+            <h1>BOLD AR</h1>
             <p class="customAR bold">123412451378907-912لمّا كان الاعتراف بالكرامة المتأصلة في جميع
             </p>
         </div>
