@@ -10,6 +10,14 @@
         /* 숫자 only */
         @font-face {
             font-family: 'roboto';
+            font-weight: 300;
+            font-style: normal;
+            src: url('./font_v3/roboto_light.ttf') format('truetype');
+            unicode-range: U+0030-0039;
+        }
+
+        @font-face {
+            font-family: 'roboto';
             font-weight: 400;
             font-style: normal;
             src: url('./font_v3/roboto_regular.ttf') format('truetype');
@@ -35,6 +43,13 @@
         /* 공통 - 라틴, cyclic, greek */
         @font-face {
             font-family: 'custom';
+            font-weight: 300;
+            font-style: normal;
+            src: url('./font_v3/notosans_light.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'custom';
             font-weight: 400;
             font-style: normal;
             src: url('./font_v3/notosans_regular.ttf') format('truetype');
@@ -55,6 +70,14 @@
         }
 
         /* 한국 */
+
+        @font-face {
+            font-family: 'customKR';
+            font-weight: 300;
+            font-style: normal;
+            src: url('./font_v3/notosans_kr_light.otf') format('opentype');
+        }
+
         @font-face {
             font-family: 'customKR';
             font-weight: 400;
@@ -79,26 +102,40 @@
         /* 일본 */
         @font-face {
             font-family: 'customJP';
+            font-weight: 300;
+            font-style: normal;
+            src: url('./font_v3/notosans_jp_light.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'customJP';
             font-weight: 400;
             font-style: normal;
-            src: url('./font_v3/notosans_jp_regular.otf') format('opentype');
+            src: url('./font_v3/notosans_jp_regular.ttf') format('truetype');
         }
 
         @font-face {
             font-family: 'customJP';
             font-weight: 500;
             font-style: normal;
-            src: url('./font_v3/notosans_jp_medium.otf') format('opentype');
+            src: url('./font_v3/notosans_jp_medium.ttf') format('truetype');
         }
 
         @font-face {
             font-family: 'customJP';
             font-weight: 700;
             font-style: normal;
-            src: url('./font_v3/notosans_jp_bold.otf') format('opentype');
+            src: url('./font_v3/notosans_jp_bold.ttf') format('truetype');
         }
 
         /* 태국어 */
+        @font-face {
+            font-family: 'customTH';
+            font-weight: 300;
+            font-style: normal;
+            src: url('./font_v3/notosans_th_light.ttf') format('truetype');
+        }
+
         @font-face {
             font-family: 'customTH';
             font-weight: 400;
@@ -123,6 +160,13 @@
         /* 대만어 */
         @font-face {
             font-family: 'customTW';
+            font-weight: 300;
+            font-style: normal;
+            src: url('./font_v3/notosans_tw_light.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'customTW';
             font-weight: 400;
             font-style: normal;
             src: url('./font_v3/notosans_tw_regular.otf') format('opentype');
@@ -145,6 +189,13 @@
         /* 중국어 */
         @font-face {
             font-family: 'customCN';
+            font-weight: 300;
+            font-style: normal;
+            src: url('./font_v3/notosans_cn_light.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'customCN';
             font-weight: 400;
             font-style: normal;
             src: url('./font_v3/notosans_cn_regular.otf') format('opentype');
@@ -164,7 +215,14 @@
             src: url('./font_v3/notosans_cn_bold.otf') format('opentype');
         }
 
-        /* 중국어 */
+        /* 아랍어 */
+        @font-face {
+            font-family: 'customAR';
+            font-weight: 300;
+            font-style: normal;
+            src: url('./font_v3/notosans_ar_light.ttf') format('truetype');
+        }
+
         @font-face {
             font-family: 'customAR';
             font-weight: 400;
@@ -212,6 +270,10 @@
 
         .size_50 {
             font-size: 50px;
+        }
+
+        .light {
+            font-weight: 300 !important;
         }
 
         .medium {
@@ -834,21 +896,22 @@
         <p class="warning">
         <h1>노토산스 ttf, otf 버전</h1>
 
-        - 총 40MB <br />
-        - KR-BOLD : 4.7MB <br />
-        - KR-MEDIUM : 4.6MB <br />
-        - KR-REGULAR : 4.6MB <br />
-        - TW : 4.0MB * 3 = 12MB <br />
-        - JP : 2.3MB * 3 = 6.9MB <br />
-        - CN : 1.8MB * 3 = 5.4MB <br />
-        - LATIN : 484KB * 3 = 1.4MB <br />
-        - AR : 174KB * 3 = 522KB <br />
-        - TH : 46KB * 3 = 138KB<br /><br />
-        - ROBOTO : 165KB * 3 = 495KB <br />
+        LIGHT 추가 버전 <br />
+        LIGHT 전체 사이트 다운로드 버전<br /><br />
+        - 총 약 95.3MB<br />
+        - CN : 8MB * 4 = 32MB<br />
+        - TW : 5.5MB * 4 = 22MB<br />
+        - JP : 5MB * 4 = 20MB<br />
+        - KR : 4.5MB * 4 = 18MB<br />
+        - LATIN : 484KB * 4 = 1.9MB<br />
+        - AR : 159KB * 4 = 636KB<br />
+        - TH : 46KB * 4 = 184KB<br />
+        - ROBOTO : 165KB * 4 = 660KB<br /><br />
+        - + 다른폰트 660KB 는 필수적으로 호출됨<br /><br />
 
-        - 495KB + 다른폰트 MB 는 필수적으로 호출됨<br /><br /><br /><br />
 
         - font-weight 기준 <br />
+        &nbsp;&nbsp;Light: 300,<br />
         &nbsp;&nbsp;Regular: 400,<br />
         &nbsp;&nbsp;Medium: 500,<br />
         &nbsp;&nbsp;Bold: 700 <br /><br />
@@ -857,15 +920,52 @@
         *Latin : 라틴어에서 발달한 스페인어, 포르투갈어, 이탈리아어, 프랑스어 등<br />
         *Cyrillic : 키릴 문자의(러시아어, 불가리아어 및 일부 중부 유럽 국가들의 언어에서 사용하는 알파벳)<br />
         *Greek : 그리스어<br />
-        &nbsp;&nbsp; 라틴,시실릭을 포함하는 폰트는 현재 사용중인 russia(32kb), turkey(22kb) 폰트 보다 regular(182kb)로 6배 정도 무거움,
-        <br />&nbsp;&nbsp; 여기에 Medium(182kb), Bold(179kb), roboto regular(65kb), roboto medium(66kb), roboto
-        bold(65kb) <br />
-        &nbsp;&nbsp; 총 합산 : 러시아 페이지에 들어갔을 때 기존에 32kb 받던 폰트 용량이 => 739kb(약 23.1배) 정도 되게 됨<br /><br />
-
-        tw가 가장 무거움, 현재 16mb를 받고 있는데 => regular(3mb), medium(3mb), bold(3mb) => 9mb + roboto(65kb + 66kb + 65kb)
-        </p>
         <!-- CUSTOM -->
         <div class="box">
+            <h1>LIGHT(*Latin, *Cyrillic and *Greek)</h1>
+            <h2>영어</h2>
+            <p class="custom light">12354127458-7=-rem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+                Lo12354127458-7=-rem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of </p>
+            <h2>프랑스어</h2>
+            <p class="custom light">12354127458-7="At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis
+                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                cupiditate non provident, similique sunt in culpa qui officia de </p>
+            <h2>독일어</h2>
+            <p class="custom light">12354127458-7=-remch zu erstellen. Es hat nicht nur 5 Jahrhunderte überlebt, sondern
+                auch
+                in Spruch in die elektronische Schriftbearbeitung geschafft (bemerke, nahezu unverändert). Bekannt wurde
+                es 1960, mit dem erscheinen von "Letraset", welches Passagen von Lorem Ipsum enhielt, so wie Desktop
+                Software wie "Ald </p>
+            <h2>스페인어</h2>
+            <p class="custom light">12354127458-7=Es un hecho establecido hace demasiado tiempo que un lector se
+                distraerá con
+                el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que
+                tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo
+                "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos
+                paquetes de autoedición y editor </p>
+            <h2>포루투갈어</h2>
+            <p class="custom light">12354127458-7=-remÉ um facto estabelecido de que um leitor é distraído pelo conteúdo
+                legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma
+                distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo aqui, conteúdo aqui", tory
+                of </p>
+            <h2>터키</h2>
+            <p class="custom light">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı
+                oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek
+                değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset
+                yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren
+                masaüstü yayıncılık yazılımları ile popüler olmuştur. </p>
+            <h2>러시아어</h2>
+            <p class="custom light">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem
+                próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie
+                niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających
+                fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym
+                do realizacji druków na komputerach osobistych, jak Aldus PageMaker </p>
 
             <h1>REGULAR(*Latin, *Cyrillic and *Greek)</h1>
             <h2>영어</h2>
@@ -887,18 +987,12 @@
                 tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo
                 "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos
                 paquetes de autoedición y editor </p>
-            <h2>스페인어</h2>
-            <p class="custom">12354127458-7=Es un hecho establecido hace demasiado tiempo que un lector se distraerá con
-                el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que
-                tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo
-                "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos
-                paquetes de autoedición y editor </p>
             <h2>포루투갈어</h2>
             <p class="custom">12354127458-7=-remÉ um facto estabelecido de que um leitor é distraído pelo conteúdo
                 legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma
                 distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo aqui, conteúdo aqui", tory
                 of </p>
-            <h2>터키(*)</h2>
+            <h2>터키</h2>
             <p class="custom">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır
                 metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı
                 oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
@@ -906,7 +1000,7 @@
                 değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset
                 yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren
                 masaüstü yayıncılık yazılımları ile popüler olmuştur. </p>
-            <h2>러시아어(*)</h2>
+            <h2>러시아어</h2>
             <p class="custom">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
                 poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem
                 próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie
@@ -934,18 +1028,12 @@
                 Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como
                 por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer.
                 Muchos paquetes de autoedición y editor </p>
-            <h2>스페인어</h2>
-            <p class="custom medium">12354127458-7=Es un hecho establecido hace demasiado tiempo que un lector se
-                distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem
-                Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como
-                por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer.
-                Muchos paquetes de autoedición y editor </p>
             <h2>포루투갈어</h2>
             <p class="custom medium">12354127458-7=-remÉ um facto estabelecido de que um leitor é distraído pelo
                 conteúdo legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a
                 uma distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo aqui, conteúdo aqui",
                 tory of </p>
-            <h2>터키(*)</h2>
+            <h2>터키</h2>
             <p class="custom medium">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır
                 metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı
                 oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
@@ -953,7 +1041,7 @@
                 değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset
                 yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren
                 masaüstü yayıncılık yazılımları ile popüler olmuştur.</p>
-            <h2>러시아어(*)</h2>
+            <h2>러시아어</h2>
             <p class="custom medium">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
                 poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem
                 próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie
@@ -981,18 +1069,12 @@
                 Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como
                 por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer.
                 Muchos paquetes de autoedición y editor </p>
-            <h2>스페인어-mx</h2>
-            <p class="custom bold">12354127458-7=-Es un hecho establecido hace demasiado tiempo que un lector se
-                distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem
-                Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como
-                por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer.
-                Muchos paquetes de autoedición y editor </p>
             <h2>포루투갈어</h2>
             <p class="custom bold">12354127458-7=É um facto estabelecido de que um leitor é distraído pelo conteúdo
                 legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma
                 distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo aqui, conteúdo aqui", tor
             </p>
-            <h2>터키(*)</h2>
+            <h2>터키</h2>
             <p class="custom bold">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır
                 metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı
                 oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
@@ -1000,7 +1082,7 @@
                 değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset
                 yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren
                 masaüstü yayıncılık yazılımları ile popüler olmuştur. </p>
-            <h2>러시아어(*)</h2>
+            <h2>러시아어</h2>
             <p class="custom bold">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
                 poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem
                 próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie
@@ -1011,6 +1093,11 @@
 
         <!-- kr -->
         <div class="box">
+            <h1>LIGHT KR(한국어)</h1>
+            <p class="customKR light">감사원의 조직·직무범12314123412위·감사위원의 자격·감사대상공무원의 범위34123412341234123412341234 기타 필요한 사항은
+                법률로
+                정한다. 제1항의 지시를 받은 당해 행정기관은 이에 응하여야 한다. 대통령은 국회에 출석하여 발언하거나 서한으로 의견을 표시할 수 있다.
+            </p>
             <h1>REGULAR KR(한국어)</h1>
             <p class="customKR">감사원의 조직·직무범12314123412위·감사위원의 자격·감사대상공무원의 범위34123412341234123412341234 기타 필요한 사항은 법률로
                 정한다. 제1항의 지시를 받은 당해 행정기관은 이에 응하여야 한다. 대통령은 국회에 출석하여 발언하거나 서한으로 의견을 표시할 수 있다.
@@ -1027,6 +1114,9 @@
 
         <!-- jp -->
         <div class="box">
+            <h1>LIGHT JP(일본어)</h1>
+            <p class="customJP light">報こは写本クょイ環予暑記アム論旬利みー割託ハラ被無ねょ1234567890はる条間ラソナ不議そみ円年ぐっそ京売げ玲善せさずラ義9議村事ねりぱふ。
+            </p>
             <h1>REGULAR JP(일본어)</h1>
             <p class="customJP">報こは写本クょイ環予暑記アム論旬利みー割託ハラ被無ねょ1234567890はる条間ラソナ不議そみ円年ぐっそ京売げ玲善せさずラ義9議村事ねりぱふ。
             </p>
@@ -1038,26 +1128,13 @@
             </p>
         </div>
 
-        <!-- ru -->
-        <div class="box">
-            <h1>REGULAR RU(러시아어 - medium, bold 없음)</h1>
-            <p class="customRU">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
-                poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem
-                próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie
-                niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających
-                fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym
-                do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
-            <h1>BOLD RU</h1>
-            <p class="customRU bold">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
-                poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem
-                próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie
-                niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających
-                fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym
-                do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
-        </div>
-
         <!-- th -->
         <div class="box">
+            <h1>LIGHT TH(태국어)</h1>
+            <p class="customTH light">าบ ไลท์ 12345679079049580sความหมายพุทธภูมิโต๋เต๋ซีดาน หลวงตา ชีสแครกเกอร์
+                มาม่าโอเวอร์หลวงปู่ปิยมิตร อิสรชนไฮบริดเคลมเปียโนฮอตดอก แอพพริคอท เสกสรรค์โปลิศฮองเฮาคันยิรูบิค
+                ป๋อหลอรามาธิบดี สไลด์ไฮเวย์จีดีพี โรลออนใช้งานต้าอ่วยเช็งเม้ง
+            </p>
             <h1>REGULAR TH(태국어)</h1>
             <p class="customTH">าบ ไลท์ 12345679079049580sความหมายพุทธภูมิโต๋เต๋ซีดาน หลวงตา ชีสแครกเกอร์
                 มาม่าโอเวอร์หลวงปู่ปิยมิตร อิสรชนไฮบริดเคลมเปียโนฮอตดอก แอพพริคอท เสกสรรค์โปลิศฮองเฮาคันยิรูบิค
@@ -1075,30 +1152,12 @@
             </p>
         </div>
 
-        <!-- tr -->
-        <div class="box">
-            <h1>REGULAR TR(터키어 - medium, bold 없음)</h1>
-            <p class="customTR">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır
-                metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı
-                oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
-                metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek
-                değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset
-                yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren
-                masaüstü yayıncılık yazılımları ile popüler olmuştur.
-            </p>
-            <h1>BOLD TR</h1>
-            <p class="customTR bold">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır
-                metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı
-                oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
-                metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek
-                değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset
-                yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren
-                masaüstü yayıncılık yazılımları ile popüler olmuştur.
-            </p>
-        </div>
-
         <!-- tw -->
         <div class="box">
+            <h1>LIGHT TW(대만어)</h1>
+            <p class="customTW light">透1234567378982374019273481過擊殺怪物、完成任務、採集行為可以獲得戰利品。 所有戰利品(也就是道具)都有一定的負重，黑色沙漠
+                MOBILE世界上以[LT]標記道具的負重。 角色可最多持有的道具量會按照背包的負重，也就是由背包負重判定。無法獲得道具、套用負面效果、而且因負重的關係無法領取任務獎勵所以也會無法完成任務。。
+            </p>
             <h1>REGULAR TW(대만어)</h1>
             <p class="customTW">透1234567378982374019273481過擊殺怪物、完成任務、採集行為可以獲得戰利品。 所有戰利品(也就是道具)都有一定的負重，黑色沙漠
                 MOBILE世界上以[LT]標記道具的負重。 角色可最多持有的道具量會按照背包的負重，也就是由背包負重判定。無法獲得道具、套用負面效果、而且因負重的關係無法領取任務獎勵所以也會無法完成任務。。
@@ -1115,6 +1174,12 @@
 
         <!-- cn -->
         <div class="box">
+            <h1>LIGHT CN(중국어)</h1>
+            <p class="customCN light">123412451378907-912Lorem Ipsum，也称乱数假文或者哑元文本，
+                是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem
+                Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem
+                Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
+            </p>
             <h1>REGULAR CN(중국어)</h1>
             <p class="customCN">123412451378907-912Lorem Ipsum，也称乱数假文或者哑元文本，
                 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem
@@ -1137,6 +1202,9 @@
 
         <!-- ar -->
         <div class="box">
+            <h1>LIGHT AR(아랍어)</h1>
+            <p class="customAR light">123412451378907-912لمّا كان الاعتراف بالكرامة المتأصلة في جميع
+            </p>
             <h1>REGULAR AR(아랍어)</h1>
             <p class="customAR">123412451378907-912لمّا كان الاعتراف بالكرامة المتأصلة في جميع
             </p>
