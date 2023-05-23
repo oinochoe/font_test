@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹 폰트 테스트 - version3</title>
+    <title>웹 폰트 테스트 - version4</title>
 
     <style>
         /* 숫자 only */
         @font-face {
             font-family: 'roboto';
-            font-weight: 400;
+            font-weight: 300;
             font-style: normal;
-            src: url('./font_v3/roboto_regular.ttf') format('truetype');
+            src: url('./font_v2/roboto_light.ttf') format('truetype');
             unicode-range: U+0030-0039;
         }
 
@@ -20,7 +20,7 @@
             font-family: 'roboto';
             font-weight: 500;
             font-style: normal;
-            src: url('./font_v3/roboto_medium.ttf') format('truetype');
+            src: url('./font_v2/roboto_medium.ttf') format('truetype');
             unicode-range: U+0030-0039;
         }
 
@@ -28,178 +28,178 @@
             font-family: 'roboto';
             font-weight: 700;
             font-style: normal;
-            src: url('./font_v3/roboto_bold.ttf') format('truetype');
+            src: url('./font_v2/roboto_bold.ttf') format('truetype');
             unicode-range: U+0030-0039;
         }
 
         /* 공통 - 라틴, cyclic, greek */
         @font-face {
             font-family: 'custom';
-            font-weight: 400;
+            font-weight: 300;
             font-style: normal;
-            src: url('./font_v3/notosans_regular.ttf') format('truetype');
+            src: url('./font_v2/notosans_light.ttf') format('truetype');
         }
 
         @font-face {
             font-family: 'custom';
             font-weight: 500;
             font-style: normal;
-            src: url('./font_v3/notosans_medium.ttf') format('truetype');
+            src: url('./font_v2/notosans_medium.ttf') format('truetype');
         }
 
         @font-face {
             font-family: 'custom';
             font-weight: 700;
             font-style: normal;
-            src: url('./font_v3/notosans_bold.ttf') format('truetype');
+            src: url('./font_v2/notosans_bold.ttf') format('truetype');
         }
 
         /* 한국 */
         @font-face {
             font-family: 'customKR';
-            font-weight: 400;
+            font-weight: 300;
             font-style: normal;
-            src: url('./font_v3/notosans_kr_regular.otf') format('opentype');
+            src: url('./font_v2/notosans_kr_light.otf') format('opentype');
         }
 
         @font-face {
             font-family: 'customKR';
             font-weight: 500;
             font-style: normal;
-            src: url('./font_v3/notosans_kr_medium.otf') format('opentype');
+            src: url('./font_v2/notosans_kr_medium.otf') format('opentype');
         }
 
         @font-face {
             font-family: 'customKR';
             font-weight: 700;
             font-style: normal;
-            src: url('./font_v3/notosans_kr_bold.otf') format('opentype');
+            src: url('./font_v2/notosans_kr_bold.otf') format('opentype');
         }
 
         /* 일본 */
         @font-face {
             font-family: 'customJP';
-            font-weight: 400;
+            font-weight: 300;
             font-style: normal;
-            src: url('./font_v3/notosans_jp_regular.otf') format('opentype');
+            src: url('./font_v2/notosans_jp_light.otf') format('opentype');
         }
 
         @font-face {
             font-family: 'customJP';
             font-weight: 500;
             font-style: normal;
-            src: url('./font_v3/notosans_jp_medium.otf') format('opentype');
+            src: url('./font_v2/notosans_jp_medium.otf') format('opentype');
         }
 
         @font-face {
             font-family: 'customJP';
             font-weight: 700;
             font-style: normal;
-            src: url('./font_v3/notosans_jp_bold.otf') format('opentype');
+            src: url('./font_v2/notosans_jp_bold.otf') format('opentype');
         }
 
         /* 러시아 - medium, bold 없음 */
         @font-face {
             font-family: 'customRU';
-            font-weight: 400;
+            font-weight: 300;
             font-style: normal;
-            src: url('./font_v3/notosans_ru_regular.ttf') format('truetype');
+            src: url('./font_v2/notosans_ru_light.ttf') format('truetype');
         }
 
         /* 태국어 */
         @font-face {
             font-family: 'customTH';
-            font-weight: 400;
+            font-weight: 300;
             font-style: normal;
-            src: url('./font_v3/notosans_th_regular.ttf') format('truetype');
+            src: url('./font_v2/notosans_th_light.ttf') format('truetype');
         }
 
         @font-face {
             font-family: 'customTH';
             font-weight: 500;
             font-style: normal;
-            src: url('./font_v3/notosans_th_medium.ttf') format('truetype');
+            src: url('./font_v2/notosans_th_medium.ttf') format('truetype');
         }
 
         @font-face {
             font-family: 'customTH';
             font-weight: 700;
             font-style: normal;
-            src: url('./font_v3/notosans_th_bold.ttf') format('truetype');
+            src: url('./font_v2/notosans_th_bold.ttf') format('truetype');
         }
 
         /* 터키어 - medium, bold 없음 */
         @font-face {
             font-family: 'customTR';
-            font-weight: 400;
+            font-weight: 300;
             font-style: normal;
-            src: url('./font_v3/notosans_tr_regular.ttf') format('truetype');
+            src: url('./font_v2/notosans_tr_light.ttf') format('truetype');
         }
 
         /* 대만어 */
         @font-face {
             font-family: 'customTW';
-            font-weight: 400;
+            font-weight: 300;
             font-style: normal;
-            src: url('./font_v3/notosans_tw_regular.otf') format('opentype');
+            src: url('./font_v2/notosans_tw_light.otf') format('opentype');
         }
 
         @font-face {
             font-family: 'customTW';
             font-weight: 500;
             font-style: normal;
-            src: url('./font_v3/notosans_tw_medium.otf') format('opentype');
+            src: url('./font_v2/notosans_tw_medium.otf') format('opentype');
         }
 
         @font-face {
             font-family: 'customTW';
             font-weight: 700;
             font-style: normal;
-            src: url('./font_v3/notosans_tw_bold.otf') format('opentype');
+            src: url('./font_v2/notosans_tw_bold.otf') format('opentype');
         }
 
         /* 중국어 */
         @font-face {
             font-family: 'customCN';
-            font-weight: 400;
+            font-weight: 300;
             font-style: normal;
-            src: url('./font_v3/notosans_cn_regular.otf') format('opentype');
+            src: url('./font_v2/notosans_cn_light.otf') format('opentype');
         }
 
         @font-face {
             font-family: 'customCN';
             font-weight: 500;
             font-style: normal;
-            src: url('./font_v3/notosans_cn_medium.otf') format('opentype');
+            src: url('./font_v2/notosans_cn_medium.otf') format('opentype');
         }
 
         @font-face {
             font-family: 'customCN';
             font-weight: 700;
             font-style: normal;
-            src: url('./font_v3/notosans_cn_bold.otf') format('opentype');
+            src: url('./font_v2/notosans_cn_bold.otf') format('opentype');
         }
 
         /* 중국어 */
         @font-face {
             font-family: 'customAR';
-            font-weight: 400;
+            font-weight: 300;
             font-style: normal;
-            src: url('./font_v3/notosans_ar_regular.ttf') format('truetype');
+            src: url('./font_v2/notosans_ar_light.ttf') format('truetype');
         }
 
         @font-face {
             font-family: 'customAR';
             font-weight: 500;
             font-style: normal;
-            src: url('./font_v3/notosans_ar_medium.ttf') format('truetype');
+            src: url('./font_v2/notosans_ar_medium.ttf') format('truetype');
         }
 
         @font-face {
             font-family: 'customAR';
             font-weight: 700;
             font-style: normal;
-            src: url('./font_v3/notosans_ar_bold.ttf') format('truetype');
+            src: url('./font_v2/notosans_ar_bold.ttf') format('truetype');
         }
 
         body {
@@ -853,7 +853,7 @@
         - 총 40MB <br />
         - KR-BOLD : 4.7MB <br />
         - KR-MEDIUM : 4.6MB <br />
-        - KR-REGULAR : 4.6MB <br />
+        - KR-LIGHT : 4.6MB <br />
         - TW : 4.0MB * 3 = 12MB <br />
         - JP : 2.3MB * 3 = 6.9MB <br />
         - CN : 1.8MB * 3 = 5.4MB <br />
@@ -865,7 +865,7 @@
         - 495KB + 다른폰트 MB 는 필수적으로 호출됨<br /><br /><br /><br />
 
         - font-weight 기준 <br />
-        &nbsp;&nbsp;Regular: 400,<br />
+        &nbsp;&nbsp;Light: 300,<br />
         &nbsp;&nbsp;Medium: 500,<br />
         &nbsp;&nbsp;Bold: 700 <br /><br />
         - font-family : devtool 참고해서 선언 확인 <br /><br />
@@ -873,17 +873,17 @@
         *Latin : 라틴어에서 발달한 스페인어, 포르투갈어, 이탈리아어, 프랑스어 등<br />
         *Cyrillic : 키릴 문자의(러시아어, 불가리아어 및 일부 중부 유럽 국가들의 언어에서 사용하는 알파벳)<br />
         *Greek : 그리스어<br />
-        &nbsp;&nbsp; 라틴,시실릭을 포함하는 폰트는 현재 사용중인 russia(32kb), turkey(22kb) 폰트 보다 regular(182kb)로 6배 정도 무거움,
-        <br />&nbsp;&nbsp; 여기에 Medium(182kb), Bold(179kb), roboto regular(65kb), roboto medium(66kb), roboto
+        &nbsp;&nbsp; 라틴,시실릭을 포함하는 폰트는 현재 사용중인 russia(32kb), turkey(22kb) 폰트 보다 light(182kb)로 6배 정도 무거움,
+        <br />&nbsp;&nbsp; 여기에 Medium(182kb), Bold(179kb), roboto light(65kb), roboto medium(66kb), roboto
         bold(65kb) <br />
         &nbsp;&nbsp; 총 합산 : 러시아 페이지에 들어갔을 때 기존에 32kb 받던 폰트 용량이 => 739kb(약 23.1배) 정도 되게 됨<br /><br />
 
-        tw가 가장 무거움, 현재 16mb를 받고 있는데 => regular(3mb), medium(3mb), bold(3mb) => 9mb + roboto(65kb + 66kb + 65kb)
+        tw가 가장 무거움, 현재 16mb를 받고 있는데 => light(3mb), medium(3mb), bold(3mb) => 9mb + roboto(65kb + 66kb + 65kb)
         </p>
         <!-- CUSTOM -->
         <div class="box">
 
-            <h1>REGULAR(*Latin, *Cyrillic and *Greek)</h1>
+            <h1>LIGHT(*Latin, *Cyrillic and *Greek)</h1>
             <h2>영어</h2>
             <p class="custom">12354127458-7=-rem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lo12354127458-7=-rem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
@@ -1027,7 +1027,7 @@
 
         <!-- kr -->
         <div class="box">
-            <h1>REGULAR KR(한국어)</h1>
+            <h1>LIGHT KR(한국어)</h1>
             <p class="customKR">감사원의 조직·직무범12314123412위·감사위원의 자격·감사대상공무원의 범위34123412341234123412341234 기타 필요한 사항은 법률로
                 정한다. 제1항의 지시를 받은 당해 행정기관은 이에 응하여야 한다. 대통령은 국회에 출석하여 발언하거나 서한으로 의견을 표시할 수 있다.
             </p>
@@ -1043,7 +1043,7 @@
 
         <!-- jp -->
         <div class="box">
-            <h1>REGULAR JP(일본어)</h1>
+            <h1>LIGHT JP(일본어)</h1>
             <p class="customJP">報こは写本クょイ環予暑記アム論旬利みー割託ハラ被無ねょ1234567890はる条間ラソナ不議そみ円年ぐっそ京売げ玲善せさずラ義9議村事ねりぱふ。
             </p>
             <h1>MEDIUM JP</h1>
@@ -1056,7 +1056,7 @@
 
         <!-- ru -->
         <div class="box">
-            <h1>REGULAR RU(러시아어 - medium, bold 없음)</h1>
+            <h1>LIGHT RU(러시아어 - medium, bold 없음)</h1>
             <p class="customRU">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
                 poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem
                 próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie
@@ -1074,7 +1074,7 @@
 
         <!-- th -->
         <div class="box">
-            <h1>REGULAR TH(태국어)</h1>
+            <h1>LIGHT TH(태국어)</h1>
             <p class="customTH">าบ ไลท์ 12345679079049580sความหมายพุทธภูมิโต๋เต๋ซีดาน หลวงตา ชีสแครกเกอร์
                 มาม่าโอเวอร์หลวงปู่ปิยมิตร อิสรชนไฮบริดเคลมเปียโนฮอตดอก แอพพริคอท เสกสรรค์โปลิศฮองเฮาคันยิรูบิค
                 ป๋อหลอรามาธิบดี สไลด์ไฮเวย์จีดีพี โรลออนใช้งานต้าอ่วยเช็งเม้ง
@@ -1093,7 +1093,7 @@
 
         <!-- tr -->
         <div class="box">
-            <h1>REGULAR TR(터키어 - medium, bold 없음)</h1>
+            <h1>LIGHT TR(터키어 - medium, bold 없음)</h1>
             <p class="customTR">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır
                 metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı
                 oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
@@ -1115,7 +1115,7 @@
 
         <!-- tw -->
         <div class="box">
-            <h1>REGULAR TW(대만어)</h1>
+            <h1>LIGHT TW(대만어)</h1>
             <p class="customTW">透1234567378982374019273481過擊殺怪物、完成任務、採集行為可以獲得戰利品。 所有戰利品(也就是道具)都有一定的負重，黑色沙漠
                 MOBILE世界上以[LT]標記道具的負重。 角色可最多持有的道具量會按照背包的負重，也就是由背包負重判定。無法獲得道具、套用負面效果、而且因負重的關係無法領取任務獎勵所以也會無法完成任務。。
             </p>
@@ -1131,7 +1131,7 @@
 
         <!-- cn -->
         <div class="box">
-            <h1>REGULAR CN(중국어)</h1>
+            <h1>LIGHT CN(중국어)</h1>
             <p class="customCN">123412451378907-912Lorem Ipsum，也称乱数假文或者哑元文本，
                 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem
                 Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem
@@ -1153,7 +1153,7 @@
 
         <!-- ar -->
         <div class="box">
-            <h1>REGULAR AR(아랍어)</h1>
+            <h1>LIGHT AR(아랍어)</h1>
             <p class="customAR">123412451378907-912لمّا كان الاعتراف بالكرامة المتأصلة في جميع
             </p>
             <h1>MEDIUM AR</h1>
