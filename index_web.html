@@ -10,6 +10,16 @@
         /* 숫자 only */
         @font-face {
             font-family: 'roboto';
+            font-weight: 300;
+            font-style: normal;
+            src: url('./font_v2/roboto_light.woff2') format('woff2'),
+                url('./font_v2/roboto_light.woff') format('woff'),
+                url('./font_v2/roboto_light.ttf') format('truetype');
+            unicode-range: U+0030-0039;
+        }
+
+        @font-face {
+            font-family: 'roboto';
             font-weight: 400;
             font-style: normal;
             src: url('./font_v2/roboto_regular.woff2') format('woff2'),
@@ -122,16 +132,6 @@
                 url('./font_v2/notosans_jp_bold.otf') format('opentype');
         }
 
-        /* 러시아 - medium, bold 없음 */
-        @font-face {
-            font-family: 'customRU';
-            font-weight: 400;
-            font-style: normal;
-            src: url('./font_v2/notosans_ru_regular.woff2') format('woff2'),
-                url('./font_v2/notosans_ru_regular.woff') format('woff'),
-                url('./font_v2/notosans_ru_regular.ttf') format('truetype');
-        }
-
         /* 태국어 */
         @font-face {
             font-family: 'customTH';
@@ -158,16 +158,6 @@
             src: url('./font_v2/notosans_th_bold.woff2') format('woff2'),
                 url('./font_v2/notosans_th_bold.woff') format('woff'),
                 url('./font_v2/notosans_th_bold.ttf') format('truetype');
-        }
-
-        /* 터키어 - medium, bold 없음 */
-        @font-face {
-            font-family: 'customTR';
-            font-weight: 400;
-            font-style: normal;
-            src: url('./font_v2/notosans_tr_regular.woff2') format('woff2'),
-                url('./font_v2/notosans_tr_regular.woff') format('woff'),
-                url('./font_v2/notosans_tr_regular.ttf') format('truetype');
         }
 
         /* 대만어 */
@@ -226,7 +216,7 @@
                 url('./font_v2/notosans_cn_bold.otf') format('opentype');
         }
 
-        /* 중국어 */
+        /* 아랍어 */
         @font-face {
             font-family: 'customAR';
             font-weight: 400;
@@ -280,6 +270,10 @@
 
         .size_50 {
             font-size: 50px;
+        }
+
+        .light {
+            font-weight: 300 !important;
         }
 
         .medium {
@@ -899,8 +893,27 @@
 
 <body>
     <div class="bg_black">
-        <p class="warning">
+        <h1>노토산스 woff2 버전</h1>
+        <p>
+
+            LIGHT 추가 버전 <br />
+            LIGHT 전체 웹 폰트 경량화 버전<br /><br />
+
+            - 총 약 17.6MB<br />
+
+            - TW : 2.8MB * 3 = 8.4MB<br />
+            - JP : 1.7MB * 3 = 5.1MB<br />
+            - CN : 1.3MB * 3 = 3.9MB <br />
+            - KR : 192KB * 3 = 576KB<br />
+            - LATIN : 180KB * 3 = 540KB<br />
+            - AR : 55KB * 3 = 165KB<br />
+            - TH : 27KB * 3 = 81KB<br />
+            - ROBOTO : 165KB * 3 = 495KB<br /><br />
+            - + 다른폰트 495KB는 필수적으로 호출됨<br /><br />
+
+
             - font-weight 기준 <br />
+            &nbsp;&nbsp;Light: 300,<br />
             &nbsp;&nbsp;Regular: 400,<br />
             &nbsp;&nbsp;Medium: 500,<br />
             &nbsp;&nbsp;Bold: 700 <br /><br />
@@ -909,12 +922,6 @@
             *Latin : 라틴어에서 발달한 스페인어, 포르투갈어, 이탈리아어, 프랑스어 등<br />
             *Cyrillic : 키릴 문자의(러시아어, 불가리아어 및 일부 중부 유럽 국가들의 언어에서 사용하는 알파벳)<br />
             *Greek : 그리스어<br />
-            &nbsp;&nbsp; 라틴,시실릭을 포함하는 폰트는 현재 사용중인 russia(32kb), turkey(22kb) 폰트 보다 regular(182kb)로 6배 정도 무거움,
-            <br />&nbsp;&nbsp; 여기에 Medium(182kb), Bold(179kb), roboto regular(65kb), roboto medium(66kb), roboto
-            bold(65kb) <br />
-            &nbsp;&nbsp; 총 합산 : 러시아 페이지에 들어갔을 때 기존에 32kb 받던 폰트 용량이 => 739kb(약 23.1배) 정도 되게 됨<br /><br />
-
-            tw가 가장 무거움, 현재 16mb를 받고 있는데 => regular(3mb), medium(3mb), bold(3mb) => 9mb + roboto(65kb + 66kb + 65kb)
         </p>
         <!-- CUSTOM -->
         <div class="box">
