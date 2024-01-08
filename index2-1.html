@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>웹 폰트 버전</title>
+
+    <style>
+        /* 숫자 only */
+        @font-face {
+            font-family: 'roboto';
+            font-weight: 400;
+            font-style: normal;
+            src: url('./font_v2/roboto_regular.woff2') format('woff2'),
+                url('./font_v2/roboto_regular.woff') format('woff'),
+                url('./font_v2/roboto_regular.ttf') format('truetype');
+            unicode-range: U+0030-0039;
+        }
+
+        @font-face {
+            font-family: 'roboto';
+            font-weight: 500;
+            font-style: normal;
+            src: url('./font_v2/roboto_medium.woff2') format('woff2'),
+                url('./font_v2/roboto_medium.woff') format('woff'),
+                url('./font_v2/roboto_medium.ttf') format('truetype');
+            unicode-range: U+0030-0039;
+        }
+
+        @font-face {
+            font-family: 'roboto';
+            font-weight: 700;
+            font-style: normal;
+            src: url('./font_v2/roboto_bold.woff2') format('woff2'),
+                url('./font_v2/roboto_bold.woff') format('woff'),
+                url('./font_v2/roboto_bold.ttf') format('truetype');
+            unicode-range: U+0030-0039;
+        }
+
+        /* 공통 - 라틴, cyclic, greek */
+        @font-face {
+            font-family: 'custom';
+            font-weight: 400;
+            font-style: normal;
+            src: url('./font_v2/notosans_regular.woff2') format('woff2'),
+                url('./font_v2/notosans_regular.woff') format('woff'),
+                url('./font_v2/notosans_regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'custom';
+            font-weight: 500;
+            font-style: normal;
+            src: url('./font_v2/notosans_medium.woff2') format('woff2'),
+                url('./font_v2/notosans_medium.woff') format('woff'),
+                url('./font_v2/notosans_medium.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'custom';
+            font-weight: 700;
+            font-style: normal;
+            src: url('./font_v2/notosans_bold.woff2') format('woff2'),
+                url('./font_v2/notosans_bold.woff') format('woff'),
+                url('./font_v2/notosans_bold.ttf') format('truetype');
+        }
+
+        /* 한국 */
+        @font-face {
+            font-family: 'customKR';
+            font-weight: 400;
+            font-style: normal;
+            src: url('./font_v2/notosans_kr_regular.woff2') format('woff2'),
+                url('./font_v2/notosans_kr_regular.woff') format('woff'),
+                url('./font_v2/notosans_kr_regular.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'customKR';
+            font-weight: 500;
+            font-style: normal;
+            src: url('./font_v2/notosans_kr_medium.woff2') format('woff2'),
+                url('./font_v2/notosans_kr_medium.woff') format('woff'),
+                url('./font_v2/notosans_kr_medium.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'customKR';
+            font-weight: 700;
+            font-style: normal;
+            src: url('./font_v2/notosans_kr_bold.woff2') format('woff2'),
+                url('./font_v2/notosans_kr_bold.woff') format('woff'),
+                url('./font_v2/notosans_kr_bold.otf') format('opentype');
+        }
+
+        /* 일본 */
+        @font-face {
+            font-family: 'customJP';
+            font-weight: 400;
+            font-style: normal;
+            src: url('./font_v2/notosans_jp_regular.woff2') format('woff2'),
+                url('./font_v2/notosans_jp_regular.woff') format('woff'),
+                url('./font_v2/notosans_jp_regular.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'customJP';
+            font-weight: 500;
+            font-style: normal;
+            src: url('./font_v2/notosans_jp_medium.woff2') format('woff2'),
+                url('./font_v2/notosans_jp_medium.woff') format('woff'),
+                url('./font_v2/notosans_jp_medium.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'customJP';
+            font-weight: 700;
+            font-style: normal;
+            src: url('./font_v2/notosans_jp_bold.woff2') format('woff2'),
+                url('./font_v2/notosans_jp_bold.woff') format('woff'),
+                url('./font_v2/notosans_jp_bold.otf') format('opentype');
+        }
+
+        /* 러시아 - medium, bold 없음 */
+        @font-face {
+            font-family: 'customRU';
+            font-weight: 400;
+            font-style: normal;
+            src: url('./font_v2/notosans_ru_regular.woff2') format('woff2'),
+                url('./font_v2/notosans_ru_regular.woff') format('woff'),
+                url('./font_v2/notosans_ru_regular.ttf') format('truetype');
+        }
+
+        /* 태국어 */
+        @font-face {
+            font-family: 'customTH';
+            font-weight: 400;
+            font-style: normal;
+            src: url('./font_v2/notosans_th_regular.woff2') format('woff2'),
+                url('./font_v2/notosans_th_regular.woff') format('woff'),
+                url('./font_v2/notosans_th_regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'customTH';
+            font-weight: 500;
+            font-style: normal;
+            src: url('./font_v2/notosans_th_medium.woff2') format('woff2'),
+                url('./font_v2/notosans_th_medium.woff') format('woff'),
+                url('./font_v2/notosans_th_medium.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'customTH';
+            font-weight: 700;
+            font-style: normal;
+            src: url('./font_v2/notosans_th_bold.woff2') format('woff2'),
+                url('./font_v2/notosans_th_bold.woff') format('woff'),
+                url('./font_v2/notosans_th_bold.ttf') format('truetype');
+        }
+
+        /* 터키어 - medium, bold 없음 */
+        @font-face {
+            font-family: 'customTR';
+            font-weight: 400;
+            font-style: normal;
+            src: url('./font_v2/notosans_tr_regular.woff2') format('woff2'),
+                url('./font_v2/notosans_tr_regular.woff') format('woff'),
+                url('./font_v2/notosans_tr_regular.ttf') format('truetype');
+        }
+
+        /* 대만어 */
+        @font-face {
+            font-family: 'customTW';
+            font-weight: 400;
+            font-style: normal;
+            src: url('./font_v2/notosans_tw_regular.woff2') format('woff2'),
+                url('./font_v2/notosans_tw_regular.woff') format('woff'),
+                url('./font_v2/notosans_tw_regular.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'customTW';
+            font-weight: 500;
+            font-style: normal;
+            src: url('./font_v2/notosans_tw_medium.woff2') format('woff2'),
+                url('./font_v2/notosans_tw_medium.woff') format('woff'),
+                url('./font_v2/notosans_tw_medium.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'customTW';
+            font-weight: 700;
+            font-style: normal;
+            src: url('./font_v2/notosans_tw_bold.woff2') format('woff2'),
+                url('./font_v2/notosans_tw_bold.woff') format('woff'),
+                url('./font_v2/notosans_tw_bold.otf') format('opentype');
+        }
+
+        /* 중국어 */
+        @font-face {
+            font-family: 'customCN';
+            font-weight: 400;
+            font-style: normal;
+            src: url('./font_v2/notosans_cn_regular.woff2') format('woff2'),
+                url('./font_v2/notosans_cn_regular.woff') format('woff'),
+                url('./font_v2/notosans_cn_regular.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'customCN';
+            font-weight: 500;
+            font-style: normal;
+            src: url('./font_v2/notosans_cn_medium.woff2') format('woff2'),
+                url('./font_v2/notosans_cn_medium.woff') format('woff'),
+                url('./font_v2/notosans_cn_medium.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'customCN';
+            font-weight: 700;
+            font-style: normal;
+            src: url('./font_v2/notosans_cn_bold.woff2') format('woff2'),
+                url('./font_v2/notosans_cn_bold.woff') format('woff'),
+                url('./font_v2/notosans_cn_bold.otf') format('opentype');
+        }
+
+        /* 중국어 */
+        @font-face {
+            font-family: 'customAR';
+            font-weight: 400;
+            font-style: normal;
+            src: url('./font_v2/notosans_ar_regular.woff2') format('woff2'),
+                url('./font_v2/notosans_ar_regular.woff') format('woff'),
+                url('./font_v2/notosans_ar_regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'customAR';
+            font-weight: 500;
+            font-style: normal;
+            src: url('./font_v2/notosans_ar_medium.woff2') format('woff2'),
+                url('./font_v2/notosans_ar_medium.woff') format('woff'),
+                url('./font_v2/notosans_ar_medium.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'customAR';
+            font-weight: 700;
+            font-style: normal;
+            src: url('./font_v2/notosans_ar_bold.woff2') format('woff2'),
+                url('./font_v2/notosans_ar_bold.woff') format('woff'),
+                url('./font_v2/notosans_ar_bold.ttf') format('truetype');
+        }
+
+        body {
+            background: #17191C;
+            color: white;
+            padding: 30px;
+            line-height: 2;
+            font-size: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        h1 {
+            margin: 20px 0 0;
+            font-size: 20px;
+            color: #2A57B7;
+        }
+
+        .warning {
+            color: #2A57B7;
+        }
+
+        .size_50 {
+            font-size: 50px;
+        }
+
+        .medium {
+            font-weight: 500 !important;
+        }
+
+        .bold {
+            font-weight: 600 !important;
+        }
+
+        .bg_black {
+            background-color: #17191C;
+            padding: 20px;
+        }
+
+        .bg_gray {
+            background-color: #444;
+            padding: 20px;
+        }
+
+        .bg_white {
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+        }
+
+        .bg_yellow {
+            background-color: rgb(253, 255, 209);
+            padding: 20px;
+        }
+
+        .box {
+            margin-top: 50px;
+            border-top: 1px solid #fff;
+        }
+
+        .custom {
+            font-family: 'roboto', 'custom', sans-serif;
+        }
+
+        .customKR {
+            font-family: 'roboto', 'customKR', sans-serif;
+        }
+
+        .customJP {
+            font-family: 'roboto', 'customJP', sans-serif;
+        }
+
+        .customRU {
+            font-family: 'roboto', 'customRU', sans-serif;
+        }
+
+        .customTH {
+            font-family: 'roboto', 'customTH', sans-serif;
+        }
+
+        .customTR {
+            font-family: 'roboto', 'customTR', sans-serif;
+        }
+
+        .customTW {
+            font-family: 'roboto', 'customTW', sans-serif;
+        }
+
+        .customCN {
+            font-family: 'roboto', 'customCN', sans-serif;
+        }
+
+        .customAR {
+            font-family: 'roboto', 'customAR', sans-serif;
+        }
+
+        html,
+        body,
+        div,
+        span,
+        input,
+        textarea,
+        a,
+        button,
+        select,
+        :lang(en-us),
+        :lang(en-us) body,
+        :lang(en-us) div,
+        :lang(en-us) span,
+        :lang(en-us) input,
+        :lang(en-us) textarea,
+        :lang(en-us) a,
+        :lang(en-us) button,
+        :lang(en-us) select,
+        :lang(en-us) p,
+        :lang(en-us) li,
+        :lang(en-us) dd,
+        :lang(en-us) dt,
+        :lang(en-us) sup,
+        :lang(en-us) sub,
+        :lang(en-us) strong,
+        :lang(en-us) blockquote,
+        :lang(en-us) pre,
+        :lang(en-us) cite,
+        :lang(en-us) em,
+        :lang(en-us) td,
+        :lang(en-us) th,
+        :lang(en-us) article,
+        :lang(fr-fr),
+        :lang(fr-fr) body,
+        :lang(fr-fr) div,
+        :lang(fr-fr) span,
+        :lang(fr-fr) input,
+        :lang(fr-fr) textarea,
+        :lang(fr-fr) a,
+        :lang(fr-fr) button,
+        :lang(fr-fr) select,
+        :lang(fr-fr) p,
+        :lang(fr-fr) li,
+        :lang(fr-fr) dd,
+        :lang(fr-fr) dt,
+        :lang(fr-fr) sup,
+        :lang(fr-fr) sub,
+        :lang(fr-fr) strong,
+        :lang(fr-fr) blockquote,
+        :lang(fr-fr) pre,
+        :lang(fr-fr) cite,
+        :lang(fr-fr) em,
+        :lang(fr-fr) td,
+        :lang(fr-fr) th,
+        :lang(fr-fr) article,
+        :lang(de-de),
+        :lang(de-de) body,
+        :lang(de-de) div,
+        :lang(de-de) span,
+        :lang(de-de) input,
+        :lang(de-de) textarea,
+        :lang(de-de) a,
+        :lang(de-de) button,
+        :lang(de-de) select,
+        :lang(de-de) p,
+        :lang(de-de) li,
+        :lang(de-de) dd,
+        :lang(de-de) dt,
+        :lang(de-de) sup,
+        :lang(de-de) sub,
+        :lang(de-de) strong,
+        :lang(de-de) blockquote,
+        :lang(de-de) pre,
+        :lang(de-de) cite,
+        :lang(de-de) em,
+        :lang(de-de) td,
+        :lang(de-de) th,
+        :lang(de-de) article,
+        :lang(es-es),
+        :lang(es-es) body,
+        :lang(es-es) div,
+        :lang(es-es) span,
+        :lang(es-es) input,
+        :lang(es-es) textarea,
+        :lang(es-es) a,
+        :lang(es-es) button,
+        :lang(es-es) select,
+        :lang(es-es) p,
+        :lang(es-es) li,
+        :lang(es-es) dd,
+        :lang(es-es) dt,
+        :lang(es-es) sup,
+        :lang(es-es) sub,
+        :lang(es-es) strong,
+        :lang(es-es) blockquote,
+        :lang(es-es) pre,
+        :lang(es-es) cite,
+        :lang(es-es) em,
+        :lang(es-es) td,
+        :lang(es-es) th,
+        :lang(es-es) article,
+        :lang(es-mx),
+        :lang(es-mx) body,
+        :lang(es-mx) div,
+        :lang(es-mx) span,
+        :lang(es-mx) input,
+        :lang(es-mx) textarea,
+        :lang(es-mx) a,
+        :lang(es-mx) button,
+        :lang(es-mx) select,
+        :lang(es-mx) p,
+        :lang(es-mx) li,
+        :lang(es-mx) dd,
+        :lang(es-mx) dt,
+        :lang(es-mx) sup,
+        :lang(es-mx) sub,
+        :lang(es-mx) strong,
+        :lang(es-mx) blockquote,
+        :lang(es-mx) pre,
+        :lang(es-mx) cite,
+        :lang(es-mx) em,
+        :lang(es-mx) td,
+        :lang(es-mx) th,
+        :lang(es-mx) article,
+        :lang(pt-br),
+        :lang(pt-br) body,
+        :lang(pt-br) div,
+        :lang(pt-br) span,
+        :lang(pt-br) input,
+        :lang(pt-br) textarea,
+        :lang(pt-br) a,
+        :lang(pt-br) button,
+        :lang(pt-br) select,
+        :lang(pt-br) p,
+        :lang(pt-br) li,
+        :lang(pt-br) dd,
+        :lang(pt-br) dt,
+        :lang(pt-br) sup,
+        :lang(pt-br) sub,
+        :lang(pt-br) strong,
+        :lang(pt-br) blockquote,
+        :lang(pt-br) pre,
+        :lang(pt-br) cite,
+        :lang(pt-br) em,
+        :lang(pt-br) td,
+        :lang(pt-br) th,
+        :lang(pt-br) article,
+        :lang(ru-ru),
+        :lang(ru-ru) body,
+        :lang(ru-ru) div,
+        :lang(ru-ru) span,
+        :lang(ru-ru) input,
+        :lang(ru-ru) textarea,
+        :lang(ru-ru) a,
+        :lang(ru-ru) button,
+        :lang(ru-ru) select,
+        :lang(ru-ru) p,
+        :lang(ru-ru) li,
+        :lang(ru-ru) dd,
+        :lang(ru-ru) dt,
+        :lang(ru-ru) sup,
+        :lang(ru-ru) sub,
+        :lang(ru-ru) strong,
+        :lang(ru-ru) blockquote,
+        :lang(ru-ru) pre,
+        :lang(ru-ru) cite,
+        :lang(ru-ru) em,
+        :lang(ru-ru) td,
+        :lang(ru-ru) th,
+        :lang(ru-ru) article,
+        :lang(tr-tr),
+        :lang(tr-tr) body,
+        :lang(tr-tr) div,
+        :lang(tr-tr) span,
+        :lang(tr-tr) input,
+        :lang(tr-tr) textarea,
+        :lang(tr-tr) a,
+        :lang(tr-tr) button,
+        :lang(tr-tr) select,
+        :lang(tr-tr) p,
+        :lang(tr-tr) li,
+        :lang(tr-tr) dd,
+        :lang(tr-tr) dt,
+        :lang(tr-tr) sup,
+        :lang(tr-tr) sub,
+        :lang(tr-tr) strong,
+        :lang(tr-tr) blockquote,
+        :lang(tr-tr) pre,
+        :lang(tr-tr) cite,
+        :lang(tr-tr) em,
+        :lang(tr-tr) td,
+        :lang(tr-tr) th,
+        :lang(tr-tr) article {
+            font-family: 'roboto', 'custom', sans-serif;
+        }
+
+        /* :lang(ru-ru), :lang(ru-ru) body, :lang(ru-ru) div, :lang(ru-ru) span, :lang(ru-ru) input, :lang(ru-ru) textarea, :lang(ru-ru) a, :lang(ru-ru) button, :lang(ru-ru) select, :lang(ru-ru) p, :lang(ru-ru) li, :lang(ru-ru) dd, :lang(ru-ru) dt, :lang(ru-ru) sup, :lang(ru-ru) sub, :lang(ru-ru) strong, :lang(ru-ru) blockquote, :lang(ru-ru) pre, :lang(ru-ru) cite, :lang(ru-ru) em, :lang(ru-ru) td, :lang(ru-ru) th, :lang(ru-ru) article { font-family: 'roboto', 'customRU', sanserif; }
+        :lang(tr-tr), :lang(tr-tr) body, :lang(tr-tr) div, :lang(tr-tr) span, :lang(tr-tr) input, :lang(tr-tr) textarea, :lang(tr-tr) a, :lang(tr-tr) button, :lang(tr-tr) select, :lang(tr-tr) p, :lang(tr-tr) li, :lang(tr-tr) dd, :lang(tr-tr) dt, :lang(tr-tr) sup, :lang(tr-tr) sub, :lang(tr-tr) strong, :lang(tr-tr) blockquote, :lang(tr-tr) pre, :lang(tr-tr) cite, :lang(tr-tr) em, :lang(tr-tr) td, :lang(tr-tr) th, :lang(tr-tr) article { font-family: 'roboto', 'customTR', sans-serif; } */
+
+        :lang(ko-kr),
+        :lang(ko-kr) body,
+        :lang(ko-kr) div,
+        :lang(ko-kr) span,
+        :lang(ko-kr) input,
+        :lang(ko-kr) textarea,
+        :lang(ko-kr) a,
+        :lang(ko-kr) button,
+        :lang(ko-kr) select,
+        :lang(ko-kr) p,
+        :lang(ko-kr) li,
+        :lang(ko-kr) dd,
+        :lang(ko-kr) dt,
+        :lang(ko-kr) sup,
+        :lang(ko-kr) sub,
+        :lang(ko-kr) strong,
+        :lang(ko-kr) blockquote,
+        :lang(ko-kr) pre,
+        :lang(ko-kr) cite,
+        :lang(ko-kr) em,
+        :lang(ko-kr) td,
+        :lang(ko-kr) th,
+        :lang(ko-kr) article {
+            font-family: 'roboto', 'customKR', sans-serif;
+        }
+
+        :lang(ja-jp),
+        :lang(ja-jp) body,
+        :lang(ja-jp) div,
+        :lang(ja-jp) span,
+        :lang(ja-jp) input,
+        :lang(ja-jp) textarea,
+        :lang(ja-jp) a,
+        :lang(ja-jp) button,
+        :lang(ja-jp) select,
+        :lang(ja-jp) p,
+        :lang(ja-jp) li,
+        :lang(ja-jp) dd,
+        :lang(ja-jp) dt,
+        :lang(ja-jp) sup,
+        :lang(ja-jp) sub,
+        :lang(ja-jp) strong,
+        :lang(ja-jp) blockquote,
+        :lang(ja-jp) pre,
+        :lang(ja-jp) cite,
+        :lang(ja-jp) em,
+        :lang(ja-jp) td,
+        :lang(ja-jp) th,
+        :lang(ja-jp) article {
+            font-family: 'roboto', 'customJP', sanserif;
+        }
+
+        :lang(th-th),
+        :lang(th-th) body,
+        :lang(th-th) div,
+        :lang(th-th) span,
+        :lang(th-th) input,
+        :lang(th-th) textarea,
+        :lang(th-th) a,
+        :lang(th-th) button,
+        :lang(th-th) select,
+        :lang(th-th) p,
+        :lang(th-th) li,
+        :lang(th-th) dd,
+        :lang(th-th) dt,
+        :lang(th-th) sup,
+        :lang(th-th) sub,
+        :lang(th-th) strong,
+        :lang(th-th) blockquote,
+        :lang(th-th) pre,
+        :lang(th-th) cite,
+        :lang(th-th) em,
+        :lang(th-th) td,
+        :lang(th-th) th,
+        :lang(th-th) article {
+            font-family: 'roboto', 'customTH', Lato, "Lucida Grande", Tahoma, sanserif;
+        }
+
+        :lang(zh-tw),
+        :lang(zh-tw) body,
+        :lang(zh-tw) div,
+        :lang(zh-tw) span,
+        :lang(zh-tw) input,
+        :lang(zh-tw) textarea,
+        :lang(zh-tw) a,
+        :lang(zh-tw) button,
+        :lang(zh-tw) select,
+        :lang(zh-tw) p,
+        :lang(zh-tw) li,
+        :lang(zh-tw) dd,
+        :lang(zh-tw) dt,
+        :lang(zh-tw) sup,
+        :lang(zh-tw) sub,
+        :lang(zh-tw) strong,
+        :lang(zh-tw) blockquote,
+        :lang(zh-tw) pre,
+        :lang(zh-tw) cite,
+        :lang(zh-tw) em,
+        :lang(zh-tw) td,
+        :lang(zh-tw) th,
+        :lang(zh-tw) article {
+            font-family: 'roboto', 'customTW', sanserif;
+        }
+
+        :lang(zh-cn),
+        :lang(zh-cn) body,
+        :lang(zh-cn) div,
+        :lang(zh-cn) span,
+        :lang(zh-cn) input,
+        :lang(zh-cn) textarea,
+        :lang(zh-cn) a,
+        :lang(zh-cn) button,
+        :lang(zh-cn) select,
+        :lang(zh-cn) p,
+        :lang(zh-cn) li,
+        :lang(zh-cn) dd,
+        :lang(zh-cn) dt,
+        :lang(zh-cn) sup,
+        :lang(zh-cn) sub,
+        :lang(zh-cn) strong,
+        :lang(zh-cn) blockquote,
+        :lang(zh-cn) pre,
+        :lang(zh-cn) cite,
+        :lang(zh-cn) em,
+        :lang(zh-cn) td,
+        :lang(zh-cn) th,
+        :lang(zh-cn) article {
+            font-family: 'roboto', 'customCN', sanserif;
+        }
+
+        :lang(ar-ae),
+        :lang(ar-ae) body,
+        :lang(ar-ae) div,
+        :lang(ar-ae) span,
+        :lang(ar-ae) input,
+        :lang(ar-ae) textarea,
+        :lang(ar-ae) a,
+        :lang(ar-ae) button,
+        :lang(ar-ae) select,
+        :lang(ar-ae) p,
+        :lang(ar-ae) li,
+        :lang(ar-ae) dd,
+        :lang(ar-ae) dt,
+        :lang(ar-ae) sup,
+        :lang(ar-ae) sub,
+        :lang(ar-ae) strong,
+        :lang(ar-ae) blockquote,
+        :lang(ar-ae) pre,
+        :lang(ar-ae) cite,
+        :lang(ar-ae) em,
+        :lang(ar-ae) td,
+        :lang(ar-ae) th,
+        :lang(ar-ae) article {
+            font-family: 'roboto', 'customAR', sanserif;
+        }
+
+        /* font-default */
+        :lang(ko-kr) .font-default,
+        :lang(ko-kr) .font-default body,
+        :lang(ko-kr) .font-default div,
+        :lang(ko-kr) .font-default span,
+        :lang(ko-kr) .font-default input,
+        :lang(ko-kr) .font-default textarea,
+        :lang(ko-kr) .font-default a,
+        :lang(ko-kr) .font-default button,
+        :lang(ko-kr) .font-default select,
+        :lang(ko-kr) .font-default p,
+        :lang(ko-kr) .font-default li,
+        :lang(ko-kr) .font-default dd,
+        :lang(ko-kr) .font-default dt,
+        :lang(ko-kr) .font-default sup,
+        :lang(ko-kr) .font-default sub,
+        :lang(ko-kr) .font-default strong,
+        :lang(ko-kr) .font-default blockquote,
+        :lang(ko-kr) .font-default pre,
+        :lang(ko-kr) .font-default cite,
+        :lang(ko-kr) .font-default em,
+        :lang(ko-kr) .font-default td,
+        :lang(ko-kr) .font-default th,
+        :lang(ko-kr) .font-default article,
+        :lang(en-us) .font-default,
+        :lang(en-us) .font-default body,
+        :lang(en-us) .font-default div,
+        :lang(en-us) .font-default span,
+        :lang(en-us) .font-default input,
+        :lang(en-us) .font-default textarea,
+        :lang(en-us) .font-default a,
+        :lang(en-us) .font-default button,
+        :lang(en-us) .font-default select,
+        :lang(en-us) .font-default p,
+        :lang(en-us) .font-default li,
+        :lang(en-us) .font-default dd,
+        :lang(en-us) .font-default dt,
+        :lang(en-us) .font-default sup,
+        :lang(en-us) .font-default sub,
+        :lang(en-us) .font-default strong,
+        :lang(en-us) .font-default blockquote,
+        :lang(en-us) .font-default pre,
+        :lang(en-us) .font-default cite,
+        :lang(en-us) .font-default em,
+        :lang(en-us) .font-default td,
+        :lang(en-us) .font-default th,
+        :lang(en-us) .font-default article,
+        :lang(fr-fr) .font-default,
+        :lang(fr-fr) .font-default body,
+        :lang(fr-fr) .font-default div,
+        :lang(fr-fr) .font-default span,
+        :lang(fr-fr) .font-default input,
+        :lang(fr-fr) .font-default textarea,
+        :lang(fr-fr) .font-default a,
+        :lang(fr-fr) .font-default button,
+        :lang(fr-fr) .font-default select,
+        :lang(fr-fr) .font-default p,
+        :lang(fr-fr) .font-default li,
+        :lang(fr-fr) .font-default dd,
+        :lang(fr-fr) .font-default dt,
+        :lang(fr-fr) .font-default sup,
+        :lang(fr-fr) .font-default sub,
+        :lang(fr-fr) .font-default strong,
+        :lang(fr-fr) .font-default blockquote,
+        :lang(fr-fr) .font-default pre,
+        :lang(fr-fr) .font-default cite,
+        :lang(fr-fr) .font-default em,
+        :lang(fr-fr) .font-default td,
+        :lang(fr-fr) .font-default th,
+        :lang(fr-fr) .font-default article,
+        :lang(de-de) .font-default,
+        :lang(de-de) .font-default body,
+        :lang(de-de) .font-default div,
+        :lang(de-de) .font-default span,
+        :lang(de-de) .font-default input,
+        :lang(de-de) .font-default textarea,
+        :lang(de-de) .font-default a,
+        :lang(de-de) .font-default button,
+        :lang(de-de) .font-default select,
+        :lang(de-de) .font-default p,
+        :lang(de-de) .font-default li,
+        :lang(de-de) .font-default dd,
+        :lang(de-de) .font-default dt,
+        :lang(de-de) .font-default sup,
+        :lang(de-de) .font-default sub,
+        :lang(de-de) .font-default strong,
+        :lang(de-de) .font-default blockquote,
+        :lang(de-de) .font-default pre,
+        :lang(de-de) .font-default cite,
+        :lang(de-de) .font-default em,
+        :lang(de-de) .font-default td,
+        :lang(de-de) .font-default th,
+        :lang(de-de) .font-default article,
+        :lang(tr-tr) .font-default,
+        :lang(tr-tr) .font-default body,
+        :lang(tr-tr) .font-default div,
+        :lang(tr-tr) .font-default span,
+        :lang(tr-tr) .font-default input,
+        :lang(tr-tr) .font-default textarea,
+        :lang(tr-tr) .font-default a,
+        :lang(tr-tr) .font-default button,
+        :lang(tr-tr) .font-default select,
+        :lang(tr-tr) .font-default p,
+        :lang(tr-tr) .font-default li,
+        :lang(tr-tr) .font-default dd,
+        :lang(tr-tr) .font-default dt,
+        :lang(tr-tr) .font-default sup,
+        :lang(tr-tr) .font-default sub,
+        :lang(tr-tr) .font-default strong,
+        :lang(tr-tr) .font-default blockquote,
+        :lang(tr-tr) .font-default pre,
+        :lang(tr-tr) .font-default cite,
+        :lang(tr-tr) .font-default em,
+        :lang(tr-tr) .font-default td,
+        :lang(tr-tr) .font-default th,
+        :lang(tr-tr) .font-default article,
+        :lang(es-es) .font-default,
+        :lang(es-es) .font-default body,
+        :lang(es-es) .font-default div,
+        :lang(es-es) .font-default span,
+        :lang(es-es) .font-default input,
+        :lang(es-es) .font-default textarea,
+        :lang(es-es) .font-default a,
+        :lang(es-es) .font-default button,
+        :lang(es-es) .font-default select,
+        :lang(es-es) .font-default p,
+        :lang(es-es) .font-default li,
+        :lang(es-es) .font-default dd,
+        :lang(es-es) .font-default dt,
+        :lang(es-es) .font-default sup,
+        :lang(es-es) .font-default sub,
+        :lang(es-es) .font-default strong,
+        :lang(es-es) .font-default blockquote,
+        :lang(es-es) .font-default pre,
+        :lang(es-es) .font-default cite,
+        :lang(es-es) .font-default em,
+        :lang(es-es) .font-default td,
+        :lang(es-es) .font-default th,
+        :lang(es-es) .font-default article,
+        :lang(es-mx) .font-default,
+        :lang(es-mx) .font-default body,
+        :lang(es-mx) .font-default div,
+        :lang(es-mx) .font-default span,
+        :lang(es-mx) .font-default input,
+        :lang(es-mx) .font-default textarea,
+        :lang(es-mx) .font-default a,
+        :lang(es-mx) .font-default button,
+        :lang(es-mx) .font-default select,
+        :lang(es-mx) .font-default p,
+        :lang(es-mx) .font-default li,
+        :lang(es-mx) .font-default dd,
+        :lang(es-mx) .font-default dt,
+        :lang(es-mx) .font-default sup,
+        :lang(es-mx) .font-default sub,
+        :lang(es-mx) .font-default strong,
+        :lang(es-mx) .font-default blockquote,
+        :lang(es-mx) .font-default pre,
+        :lang(es-mx) .font-default cite,
+        :lang(es-mx) .font-default em,
+        :lang(es-mx) .font-default td,
+        :lang(es-mx) .font-default th,
+        :lang(es-mx) .font-default article,
+        :lang(pt-br) .font-default,
+        :lang(pt-br) .font-default body,
+        :lang(pt-br) .font-default div,
+        :lang(pt-br) .font-default span,
+        :lang(pt-br) .font-default input,
+        :lang(pt-br) .font-default textarea,
+        :lang(pt-br) .font-default a,
+        :lang(pt-br) .font-default button,
+        :lang(pt-br) .font-default select,
+        :lang(pt-br) .font-default p,
+        :lang(pt-br) .font-default li,
+        :lang(pt-br) .font-default dd,
+        :lang(pt-br) .font-default dt,
+        :lang(pt-br) .font-default sup,
+        :lang(pt-br) .font-default sub,
+        :lang(pt-br) .font-default strong,
+        :lang(pt-br) .font-default blockquote,
+        :lang(pt-br) .font-default pre,
+        :lang(pt-br) .font-default cite,
+        :lang(pt-br) .font-default em,
+        :lang(pt-br) .font-default td,
+        :lang(pt-br) .font-default th,
+        :lang(pt-br) .font-default article {
+            font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg_white">
+        <p class="warning">
+            - font-weight 기준 <br />
+            &nbsp;&nbsp;Regular: 400,<br />
+            &nbsp;&nbsp;Medium: 500,<br />
+            &nbsp;&nbsp;Bold: 700 <br /><br />
+            - font-family : devtool 참고해서 선언 확인 <br /><br />
+
+            *Latin : 라틴어에서 발달한 스페인어, 포르투갈어, 이탈리아어, 프랑스어 등<br />
+            *Cyrillic : 키릴 문자의(러시아어, 불가리아어 및 일부 중부 유럽 국가들의 언어에서 사용하는 알파벳)<br />
+            *Greek : 그리스어<br />
+            &nbsp;&nbsp; 라틴,시실릭을 포함하는 폰트는 현재 사용중인 russia(32kb), turkey(22kb) 폰트 보다 regular(182kb)로 6배 정도 무거움,
+            <br />&nbsp;&nbsp; 여기에 Medium(182kb), Bold(179kb), roboto regular(65kb), roboto medium(66kb), roboto
+            bold(65kb) <br />
+            &nbsp;&nbsp; 총 합산 : 러시아 페이지에 들어갔을 때 기존에 32kb 받던 폰트 용량이 => 739kb(약 23.1배) 정도 되게 됨<br /><br />
+
+            tw가 가장 무거움, 현재 16mb를 받고 있는데 => regular(3mb), medium(3mb), bold(3mb) => 9mb + roboto(65kb + 66kb + 65kb)
+        </p>
+        <!-- CUSTOM -->
+        <div class="box">
+
+            <h1>REGULAR(*Latin, *Cyrillic and *Greek)</h1>
+            <h2>영어</h2>
+            <p class="custom">12354127458-7=-rem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lo12354127458-7=-rem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of </p>
+            <h2>프랑스어</h2>
+            <p class="custom">12354127458-7="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                cupiditate non provident, similique sunt in culpa qui officia de </p>
+            <h2>독일어</h2>
+            <p class="custom">12354127458-7=-remch zu erstellen. Es hat nicht nur 5 Jahrhunderte überlebt, sondern auch
+                in Spruch in die elektronische Schriftbearbeitung geschafft (bemerke, nahezu unverändert). Bekannt wurde
+                es 1960, mit dem erscheinen von "Letraset", welches Passagen von Lorem Ipsum enhielt, so wie Desktop
+                Software wie "Ald </p>
+            <h2>스페인어</h2>
+            <p class="custom">12354127458-7=Es un hecho establecido hace demasiado tiempo que un lector se distraerá con
+                el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que
+                tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo
+                "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos
+                paquetes de autoedición y editor </p>
+            <h2>스페인어</h2>
+            <p class="custom">12354127458-7=Es un hecho establecido hace demasiado tiempo que un lector se distraerá con
+                el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que
+                tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo
+                "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos
+                paquetes de autoedición y editor </p>
+            <h2>포루투갈어</h2>
+            <p class="custom">12354127458-7=-remÉ um facto estabelecido de que um leitor é distraído pelo conteúdo
+                legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma
+                distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo aqui, conteúdo aqui", tory
+                of </p>
+            <h2>터키(*)</h2>
+            <p class="custom">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı
+                oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek
+                değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset
+                yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren
+                masaüstü yayıncılık yazılımları ile popüler olmuştur. </p>
+            <h2>러시아어(*)</h2>
+            <p class="custom">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem
+                próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie
+                niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających
+                fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym
+                do realizacji druków na komputerach osobistych, jak Aldus PageMaker </p>
+
+            <h1>MEDIUM(*Latin, *Cyrillic and *Greek)</h1>
+            <h2>영어</h2>
+            <p class="custom medium">12354127458-7=-rem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lo12354127458-7=-rem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of </p>
+            <h2>프랑스어</h2>
+            <p class="custom medium">12354127458-7="At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                occaecati cupiditate non provident, similique sunt in culpa qui officia de </p>
+            <h2>독일어</h2>
+            <p class="custom medium">12354127458-7=-remch zu erstellen. Es hat nicht nur 5 Jahrhunderte überlebt,
+                sondern auch in Spruch in die elektronische Schriftbearbeitung geschafft (bemerke, nahezu unverändert).
+                Bekannt wurde es 1960, mit dem erscheinen von "Letraset", welches Passagen von Lorem Ipsum enhielt, so
+                wie Desktop Software wie "Ald </p>
+            <h2>스페인어</h2>
+            <p class="custom medium">12354127458-7=Es un hecho establecido hace demasiado tiempo que un lector se
+                distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem
+                Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como
+                por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer.
+                Muchos paquetes de autoedición y editor </p>
+            <h2>스페인어</h2>
+            <p class="custom medium">12354127458-7=Es un hecho establecido hace demasiado tiempo que un lector se
+                distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem
+                Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como
+                por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer.
+                Muchos paquetes de autoedición y editor </p>
+            <h2>포루투갈어</h2>
+            <p class="custom medium">12354127458-7=-remÉ um facto estabelecido de que um leitor é distraído pelo
+                conteúdo legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a
+                uma distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo aqui, conteúdo aqui",
+                tory of </p>
+            <h2>터키(*)</h2>
+            <p class="custom medium">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı
+                oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek
+                değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset
+                yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren
+                masaüstü yayıncılık yazılımları ile popüler olmuştur.</p>
+            <h2>러시아어(*)</h2>
+            <p class="custom medium">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem
+                próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie
+                niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających
+                fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym
+                do realizacji druków na komputerach osobistych, jak Aldus PageMaker </p>
+
+            <h1>BOLD(*Latin, *Cyrillic and *Greek)</h1>
+            <h2>영어</h2>
+            <p class="custom bold">12354127458-7=-rem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lo12354127458-7=-rem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of </p>
+            <h2>프랑스어</h2>
+            <p class="custom bold">12354127458-7=-"At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                occaecati cupiditate non provident, similique sunt in culpa qui officia de </p>
+            <h2>독일어</h2>
+            <p class="custom bold">12354127458-7=-ch zu erstellen. Es hat nicht nur 5 Jahrhunderte überlebt, sondern
+                auch in Spruch in die elektronische Schriftbearbeitung geschafft (bemerke, nahezu unverändert). Bekannt
+                wurde es 1960, mit dem erscheinen von "Letraset", welches Passagen von Lorem Ipsum enhielt, so wie
+                Desktop Software wie "Ald </p>
+            <h2>스페인어</h2>
+            <p class="custom bold">12354127458-7=-Es un hecho establecido hace demasiado tiempo que un lector se
+                distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem
+                Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como
+                por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer.
+                Muchos paquetes de autoedición y editor </p>
+            <h2>스페인어-mx</h2>
+            <p class="custom bold">12354127458-7=-Es un hecho establecido hace demasiado tiempo que un lector se
+                distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem
+                Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como
+                por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer.
+                Muchos paquetes de autoedición y editor </p>
+            <h2>포루투갈어</h2>
+            <p class="custom bold">12354127458-7=É um facto estabelecido de que um leitor é distraído pelo conteúdo
+                legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma
+                distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo aqui, conteúdo aqui", tor
+            </p>
+            <h2>터키(*)</h2>
+            <p class="custom bold">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı
+                oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek
+                değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset
+                yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren
+                masaüstü yayıncılık yazılımları ile popüler olmuştur. </p>
+            <h2>러시아어(*)</h2>
+            <p class="custom bold">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem
+                próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie
+                niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających
+                fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym
+                do realizacji druków na komputerach osobistych, jak Aldus PageMaker </p>
+        </div>
+
+        <!-- kr -->
+        <div class="box">
+            <h1>REGULAR KR(한국어)</h1>
+            <p class="customKR">군인은 현역을 면한 후가 아니면 국무위원으로 임명될 수 없다. 누구든지 병역의무의 이행으로 인하여 불이익한 처우를 받지 아니한다. 대통령은 법률이 정하는 바에
+                의하여 훈장 기타의 영전을 수여한다. 국민경제의 발전을 위한 중요정책의 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다.
+            </p>
+            <h1>MEDIUM KR</h1>
+            <p class="customKR medium">군인은 현역을 면한 후가 아니면 국무위원으로 임명될 수 없다. 누구든지 병역의무의 이행으로 인하여 불이익한 처우를 받지 아니한다. 대통령은 법률이
+                정하는 바에
+                의하여 훈장 기타의 영전을 수여한다. 국민경제의 발전을 위한 중요정책의 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다.
+            </p>
+            <h1>BOLD KR</h1>
+            <p class="customKR bold">군인은 현역을 면한 후가 아니면 국무위원으로 임명될 수 없다. 누구든지 병역의무의 이행으로 인하여 불이익한 처우를 받지 아니한다. 대통령은 법률이
+                정하는 바에
+                의하여 훈장 기타의 영전을 수여한다. 국민경제의 발전을 위한 중요정책의 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다.
+            </p>
+        </div>
+
+        <!-- jp -->
+        <div class="box">
+            <h1>REGULAR JP(일본어)</h1>
+            <p class="customJP">報こは写本クょイ環予暑記アム論旬利みー割託ハラ被無ねょ1234567890はる条間ラソナ不議そみ円年ぐっそ京売げ玲善せさずラ義9議村事ねりぱふ。
+            </p>
+            <h1>MEDIUM JP</h1>
+            <p class="customJP medium">報こは写本クょイ環予暑記アム論旬利みー割託ハラ被無ねょ1234567890はる条間ラソナ不議そみ円年ぐっそ京売げ玲善せさずラ義9議村事ねりぱふ。
+            </p>
+            <h1>BOLD JP</h1>
+            <p class="customJP bold">報こは写本クょイ環予暑記アム論旬利みー割託ハラ被無ねょ1234567890はる条間ラソナ不議そみ円年ぐっそ京売げ玲善せさずラ義9議村事ねりぱふ。
+            </p>
+        </div>
+
+        <!-- ru -->
+        <div class="box">
+            <h1>REGULAR RU(러시아어 - medium, bold 없음)</h1>
+            <p class="customRU">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem
+                próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie
+                niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających
+                fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym
+                do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+            <h1>BOLD RU</h1>
+            <p class="customRU bold">orem I123456789psum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem
+                próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie
+                niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających
+                fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym
+                do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+        </div>
+
+        <!-- th -->
+        <div class="box">
+            <h1>REGULAR TH(태국어)</h1>
+            <p class="customTH">าบ ไลท์ 12345679079049580sความหมายพุทธภูมิโต๋เต๋ซีดาน หลวงตา ชีสแครกเกอร์
+                มาม่าโอเวอร์หลวงปู่ปิยมิตร อิสรชนไฮบริดเคลมเปียโนฮอตดอก แอพพริคอท เสกสรรค์โปลิศฮองเฮาคันยิรูบิค
+                ป๋อหลอรามาธิบดี สไลด์ไฮเวย์จีดีพี โรลออนใช้งานต้าอ่วยเช็งเม้ง
+            </p>
+            <h1>MEDIUM TH</h1>
+            <p class="customTH medium">าบ ไลท์ 12345679079049580sความหมายพุทธภูมิโต๋เต๋ซีดาน หลวงตา ชีสแครกเกอร์
+                มาม่าโอเวอร์หลวงปู่ปิยมิตร อิสรชนไฮบริดเคลมเปียโนฮอตดอก แอพพริคอท เสกสรรค์โปลิศฮองเฮาคันยิรูบิค
+                ป๋อหลอรามาธิบดี สไลด์ไฮเวย์จีดีพี โรลออนใช้งานต้าอ่วยเช็งเม้ง
+            </p>
+            <h1>BOLD TH</h1>
+            <p class="customTH bold">าบ ไลท์ 12345679079049580sความหมายพุทธภูมิโต๋เต๋ซีดาน หลวงตา ชีสแครกเกอร์
+                มาม่าโอเวอร์หลวงปู่ปิยมิตร อิสรชนไฮบริดเคลมเปียโนฮอตดอก แอพพริคอท เสกสรรค์โปลิศฮองเฮาคันยิรูบิค
+                ป๋อหลอรามาธิบดี สไลด์ไฮเวย์จีดีพี โรลออนใช้งานต้าอ่วยเช็งเม้ง
+            </p>
+        </div>
+
+        <!-- tr -->
+        <div class="box">
+            <h1>REGULAR TR(터키어 - medium, bold 없음)</h1>
+            <p class="customTR">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı
+                oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek
+                değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset
+                yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren
+                masaüstü yayıncılık yazılımları ile popüler olmuştur.
+            </p>
+            <h1>BOLD TR</h1>
+            <p class="customTR bold">Lorem Ipsum, 123456799071932849213dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, 123456799071932849213adı bilinmeyen bir matbaacının bir hurufat numune kitabı
+                oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek
+                değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset
+                yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren
+                masaüstü yayıncılık yazılımları ile popüler olmuştur.
+            </p>
+        </div>
+
+        <!-- tw -->
+        <div class="box">
+            <h1>REGULAR TW(대만어)</h1>
+            <p class="customTW">透1234567378982374019273481過擊殺怪物、完成任務、採集行為可以獲得戰利品。 所有戰利品(也就是道具)都有一定的負重，黑色沙漠
+                MOBILE世界上以[LT]標記道具的負重。 角色可最多持有的道具量會按照背包的負重，也就是由背包負重判定。無法獲得道具、套用負面效果、而且因負重的關係無法領取任務獎勵所以也會無法完成任務。。
+            </p>
+            <h1>MEDIUM TW</h1>
+            <p class="customTW medium">透1234567378982374019273481過擊殺怪物、完成任務、採集行為可以獲得戰利品。 所有戰利品(也就是道具)都有一定的負重，黑色沙漠
+                MOBILE世界上以[LT]標記道具的負重。 角色可最多持有的道具量會按照背包的負重，也就是由背包負重判定。無法獲得道具、套用負面效果、而且因負重的關係無法領取任務獎勵所以也會無法完成任務。。
+            </p>
+            <h1>BOLD TW</h1>
+            <p class="customTW bold">透1234567378982374019273481過擊殺怪物、完成任務、採集行為可以獲得戰利品。 所有戰利品(也就是道具)都有一定的負重，黑色沙漠
+                MOBILE世界上以[LT]標記道具的負重。 角色可最多持有的道具量會按照背包的負重，也就是由背包負重判定。無法獲得道具、套用負面效果、而且因負重的關係無法領取任務獎勵所以也會無法完成任務。。
+            </p>
+        </div>
+
+        <!-- cn -->
+        <div class="box">
+            <h1>REGULAR CN(중국어)</h1>
+            <p class="customCN">123412451378907-912Lorem Ipsum，也称乱数假文或者哑元文本，
+                是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem
+                Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem
+                Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
+            </p>
+            <h1>MEDIUM CN</h1>
+            <p class="customCN medium">123412451378907-912Lorem Ipsum，也称乱数假文或者哑元文本，
+                是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem
+                Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem
+                Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
+            </p>
+            <h1>BOLD CN</h1>
+            <p class="customCN bold">123412451378907-912Lorem Ipsum，也称乱数假文或者哑元文本，
+                是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem
+                Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem
+                Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
+            </p>
+        </div>
+
+        <!-- ar -->
+        <div class="box">
+            <h1>REGULAR AR(아랍어)</h1>
+            <p class="customAR">123412451378907-912لمّا كان الاعتراف بالكرامة المتأصلة في جميع
+            </p>
+            <h1>MEDIUM AR</h1>
+            <p class="customAR medium">123412451378907-912لمّا كان الاعتراف بالكرامة المتأصلة في جميع
+            </p>
+            <h1>BOLD AR</h1>
+            <p class="customAR bold">123412451378907-912لمّا كان الاعتراف بالكرامة المتأصلة في جميع
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
